@@ -1,0 +1,140 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .title { font: bold 24px sans-serif; }
+            .subtitle { font: italic 14px sans-serif; fill: #666; }
+            .box { stroke: #666; fill: #fff; stroke-width: 2; }
+            .setup { fill: #e6f7ff; stroke: #1890ff; }
+            .workflow { fill: #fff7e6; stroke: #fa8c16; }
+            .best { fill: #f6ffed; stroke: #52c41a; }
+            .contribution { fill: #f9f0ff; stroke: #722ed1; }
+            .deploy { fill: #fff1f0; stroke: #ff4d4f; }
+            .step { fill: #fff; stroke: #d9d9d9; }
+            .arrow { stroke: #666; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+            .dashed { stroke-dasharray: 5,5; }
+            .section-title { font: bold 16px sans-serif; }
+            .step-title { font: bold 14px sans-serif; }
+            .step-desc { font: 12px sans-serif; fill: #555; }
+            .step-num { font: bold 14px sans-serif; fill: #fff; }
+            .step-circle { fill: #1890ff; }
+        </style>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+    
+    <!-- Title -->
+    <text x="400" y="30" class="title" text-anchor="middle">Open WebUI 开发指南</text>
+    <text x="400" y="55" class="subtitle" text-anchor="middle">开发流程与最佳实践</text>
+    
+    <!-- Development Setup -->
+    <rect x="50" y="80" width="700" height="100" rx="10" class="box setup" />
+    <text x="400" y="105" class="section-title" text-anchor="middle">开发环境设置</text>
+    
+    <rect x="70" y="120" width="150" height="40" rx="5" class="box step" />
+    <text x="145" y="145" class="step-title" text-anchor="middle" font-size="13px">克隆代码库</text>
+    
+    <rect x="240" y="120" width="150" height="40" rx="5" class="box step" />
+    <text x="315" y="145" class="step-title" text-anchor="middle" font-size="13px">安装依赖</text>
+    
+    <rect x="410" y="120" width="150" height="40" rx="5" class="box step" />
+    <text x="485" y="145" class="step-title" text-anchor="middle" font-size="13px">配置环境变量</text>
+    
+    <rect x="580" y="120" width="150" height="40" rx="5" class="box step" />
+    <text x="655" y="145" class="step-title" text-anchor="middle" font-size="13px">启动开发服务器</text>
+    
+    <!-- Development Workflow -->
+    <rect x="50" y="200" width="700" height="100" rx="10" class="box workflow" />
+    <text x="400" y="225" class="section-title" text-anchor="middle">开发工作流程</text>
+    
+    <circle cx="100" cy="260" r="12" class="step-circle" />
+    <text x="100" y="264" class="step-num" text-anchor="middle">1</text>
+    <text x="140" y="264" class="step-desc" text-anchor="start">创建功能分支</text>
+    
+    <circle cx="220" cy="260" r="12" class="step-circle" />
+    <text x="220" y="264" class="step-num" text-anchor="middle">2</text>
+    <text x="260" y="264" class="step-desc" text-anchor="start">开发新功能</text>
+    
+    <circle cx="340" cy="260" r="12" class="step-circle" />
+    <text x="340" y="264" class="step-num" text-anchor="middle">3</text>
+    <text x="380" y="264" class="step-desc" text-anchor="start">编写测试</text>
+    
+    <circle cx="460" cy="260" r="12" class="step-circle" />
+    <text x="460" y="264" class="step-num" text-anchor="middle">4</text>
+    <text x="500" y="264" class="step-desc" text-anchor="start">提交代码</text>
+    
+    <circle cx="580" cy="260" r="12" class="step-circle" />
+    <text x="580" y="264" class="step-num" text-anchor="middle">5</text>
+    <text x="620" y="264" class="step-desc" text-anchor="start">创建Pull Request</text>
+    
+    <circle cx="100" cy="290" r="12" class="step-circle" />
+    <text x="100" y="294" class="step-num" text-anchor="middle">6</text>
+    <text x="140" y="294" class="step-desc" text-anchor="start">代码审查</text>
+    
+    <circle cx="220" cy="290" r="12" class="step-circle" />
+    <text x="220" y="294" class="step-num" text-anchor="middle">7</text>
+    <text x="260" y="294" class="step-desc" text-anchor="start">修复问题</text>
+    
+    <circle cx="340" cy="290" r="12" class="step-circle" />
+    <text x="340" y="294" class="step-num" text-anchor="middle">8</text>
+    <text x="380" y="294" class="step-desc" text-anchor="start">合并到主分支</text>
+    
+    <circle cx="460" cy="290" r="12" class="step-circle" />
+    <text x="460" y="294" class="step-num" text-anchor="middle">9</text>
+    <text x="500" y="294" class="step-desc" text-anchor="start">更新文档</text>
+    
+    <!-- Best Practices -->
+    <rect x="50" y="320" width="340" height="160" rx="10" class="box best" />
+    <text x="220" y="345" class="section-title" text-anchor="middle">最佳实践</text>
+    
+    <rect x="70" y="360" width="300" height="30" rx="5" class="box step" />
+    <text x="220" y="380" class="step-desc" text-anchor="middle">遵循代码风格指南和命名约定</text>
+    
+    <rect x="70" y="400" width="300" height="30" rx="5" class="box step" />
+    <text x="220" y="420" class="step-desc" text-anchor="middle">编写详细的注释和文档</text>
+    
+    <rect x="70" y="440" width="300" height="30" rx="5" class="box step" />
+    <text x="220" y="460" class="step-desc" text-anchor="middle">适当拆分组件和功能模块</text>
+    
+    <!-- Contribution Guidelines -->
+    <rect x="410" y="320" width="340" height="160" rx="10" class="box contribution" />
+    <text x="580" y="345" class="section-title" text-anchor="middle">贡献指南</text>
+    
+    <rect x="430" y="360" width="300" height="30" rx="5" class="box step" />
+    <text x="580" y="380" class="step-desc" text-anchor="middle">遵循项目Issue和PR模板</text>
+    
+    <rect x="430" y="400" width="300" height="30" rx="5" class="box step" />
+    <text x="580" y="420" class="step-desc" text-anchor="middle">提交前运行所有测试</text>
+    
+    <rect x="430" y="440" width="300" height="30" rx="5" class="box step" />
+    <text x="580" y="460" class="step-desc" text-anchor="middle">保持提交信息清晰和有意义</text>
+    
+    <!-- Deployment -->
+    <rect x="50" y="500" width="700" height="80" rx="10" class="box deploy" />
+    <text x="400" y="525" class="section-title" text-anchor="middle">部署流程</text>
+    
+    <rect x="70" y="540" width="160" height="30" rx="5" class="box step" />
+    <text x="150" y="560" class="step-desc" text-anchor="middle">构建生产版本</text>
+    
+    <rect x="250" y="540" width="160" height="30" rx="5" class="box step" />
+    <text x="330" y="560" class="step-desc" text-anchor="middle">打包和发布</text>
+    
+    <rect x="430" y="540" width="160" height="30" rx="5" class="box step" />
+    <text x="510" y="560" class="step-desc" text-anchor="middle">Docker部署</text>
+    
+    <rect x="610" y="540" width="120" height="30" rx="5" class="box step" />
+    <text x="670" y="560" class="step-desc" text-anchor="middle">版本发布</text>
+    
+    <!-- Connecting Lines -->
+    <line x1="100" y1="160" x2="100" y2="200" class="arrow" />
+    <line x1="580" y1="480" x2="580" y2="500" class="arrow" />
+    <line x1="220" y1="480" x2="220" y2="500" class="arrow" />
+    
+    <line x1="195" y1="140" x2="240" y2="140" class="arrow" />
+    <line x1="365" y1="140" x2="410" y2="140" class="arrow" />
+    <line x1="535" y1="140" x2="580" y2="140" class="arrow" />
+    
+    <line x1="150" y1="555" x2="250" y2="555" class="arrow" />
+    <line x1="330" y1="555" x2="430" y2="555" class="arrow" />
+    <line x1="510" y1="555" x2="610" y2="555" class="arrow" />
+</svg> 

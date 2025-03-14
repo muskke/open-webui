@@ -1,0 +1,139 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .title { font: bold 24px sans-serif; }
+            .subtitle { font: italic 14px sans-serif; fill: #666; }
+            .box { stroke: #666; fill: #fff; stroke-width: 2; }
+            .user { fill: #e6f7ff; stroke: #1890ff; }
+            .document { fill: #fff7e6; stroke: #fa8c16; }
+            .embedding { fill: #f9f0ff; stroke: #722ed1; }
+            .retrieval { fill: #f6ffed; stroke: #52c41a; }
+            .llm { fill: #fff1f0; stroke: #ff4d4f; }
+            .process { fill: #fff; stroke: #d9d9d9; }
+            .db { fill: #e6f7ff; stroke: #1890ff; opacity: 0.7; }
+            .arrow { stroke: #666; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+            .dashed { stroke-dasharray: 5,5; }
+            .component-title { font: bold 14px sans-serif; }
+            .component-desc { font: 12px sans-serif; fill: #555; }
+            .step-num { font: bold 14px sans-serif; fill: #fff; }
+            .step-circle { fill: #1890ff; }
+            .flow-desc { font: 12px sans-serif; fill: #666; }
+        </style>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+    
+    <!-- Title -->
+    <text x="400" y="30" class="title" text-anchor="middle">Open WebUI RAG系统架构</text>
+    <text x="400" y="55" class="subtitle" text-anchor="middle">检索增强生成的实现机制</text>
+    
+    <!-- Main Components -->
+    <rect x="50" y="80" width="700" height="260" rx="10" class="box" fill="#f9f9f9" />
+    <text x="400" y="105" class="component-title" text-anchor="middle">主要组件</text>
+    
+    <!-- Document Processing -->
+    <rect x="80" y="120" width="150" height="200" rx="10" class="box document" />
+    <text x="155" y="140" class="component-title" text-anchor="middle">文档处理</text>
+    
+    <rect x="95" y="155" width="120" height="35" rx="5" class="box process" />
+    <text x="155" y="177" class="component-desc" text-anchor="middle">文档上传</text>
+    
+    <rect x="95" y="200" width="120" height="35" rx="5" class="box process" />
+    <text x="155" y="222" class="component-desc" text-anchor="middle">文本提取</text>
+    
+    <rect x="95" y="245" width="120" height="35" rx="5" class="box process" />
+    <text x="155" y="267" class="component-desc" text-anchor="middle">文本分块</text>
+    
+    <rect x="95" y="290" width="120" height="0" rx="5" class="box process" opacity="0" />
+    <text x="155" y="280" class="component-desc" text-anchor="middle" font-style="italic">支持多种文件格式</text>
+    
+    <!-- Embedding Generation -->
+    <rect x="270" y="120" width="150" height="200" rx="10" class="box embedding" />
+    <text x="345" y="140" class="component-title" text-anchor="middle">嵌入生成</text>
+    
+    <rect x="285" y="155" width="120" height="35" rx="5" class="box process" />
+    <text x="345" y="177" class="component-desc" text-anchor="middle">向量化模型</text>
+    
+    <rect x="285" y="200" width="120" height="35" rx="5" class="box process" />
+    <text x="345" y="222" class="component-desc" text-anchor="middle">批量处理</text>
+    
+    <rect x="285" y="245" width="120" height="35" rx="5" class="box process" />
+    <text x="345" y="267" class="component-desc" text-anchor="middle">向量存储</text>
+    
+    <rect x="285" y="290" width="120" height="0" rx="5" class="box process" opacity="0" />
+    <text x="345" y="280" class="component-desc" text-anchor="middle" font-style="italic">高维语义表示</text>
+    
+    <!-- Retrieval Engine -->
+    <rect x="460" y="120" width="150" height="200" rx="10" class="box retrieval" />
+    <text x="535" y="140" class="component-title" text-anchor="middle">检索引擎</text>
+    
+    <rect x="475" y="155" width="120" height="35" rx="5" class="box process" />
+    <text x="535" y="177" class="component-desc" text-anchor="middle">相似度搜索</text>
+    
+    <rect x="475" y="200" width="120" height="35" rx="5" class="box process" />
+    <text x="535" y="222" class="component-desc" text-anchor="middle">结果过滤</text>
+    
+    <rect x="475" y="245" width="120" height="35" rx="5" class="box process" />
+    <text x="535" y="267" class="component-desc" text-anchor="middle">相关性排序</text>
+    
+    <rect x="475" y="290" width="120" height="0" rx="5" class="box process" opacity="0" />
+    <text x="535" y="280" class="component-desc" text-anchor="middle" font-style="italic">高效低延迟检索</text>
+    
+    <!-- LLM Augmentation -->
+    <rect x="650" y="120" width="80" height="200" rx="10" class="box llm" />
+    <text x="690" y="140" class="component-title" text-anchor="middle">LLM</text>
+    
+    <rect x="655" y="155" width="70" height="35" rx="5" class="box process" />
+    <text x="690" y="177" class="component-desc" text-anchor="middle">上下文</text>
+    
+    <rect x="655" y="200" width="70" height="35" rx="5" class="box process" />
+    <text x="690" y="222" class="component-desc" text-anchor="middle">合成</text>
+    
+    <rect x="655" y="245" width="70" height="35" rx="5" class="box process" />
+    <text x="690" y="267" class="component-desc" text-anchor="middle">生成</text>
+    
+    <!-- Vector Database -->
+    <rect x="300" y="380" width="200" height="60" rx="10" class="box db" />
+    <text x="400" y="415" class="component-title" text-anchor="middle">向量数据库</text>
+    
+    <!-- RAG Workflow -->
+    <rect x="100" y="450" width="600" height="130" rx="10" class="box" fill="#f9f9f9" />
+    <text x="400" y="475" class="component-title" text-anchor="middle">RAG工作流程</text>
+    
+    <!-- Flow Steps -->
+    <circle cx="130" cy="500" r="12" class="step-circle" />
+    <text x="130" y="504" class="step-num" text-anchor="middle">1</text>
+    <text x="410" y="504" class="flow-desc" text-anchor="middle">用户提出问题，系统将问题转换为向量表示</text>
+    
+    <circle cx="130" cy="530" r="12" class="step-circle" />
+    <text x="130" y="534" class="step-num" text-anchor="middle">2</text>
+    <text x="410" y="534" class="flow-desc" text-anchor="middle">系统在向量数据库中检索与问题语义相关的文档片段</text>
+    
+    <circle cx="130" cy="560" r="12" class="step-circle" />
+    <text x="130" y="564" class="step-num" text-anchor="middle">3</text>
+    <text x="410" y="564" class="flow-desc" text-anchor="middle">检索到的信息与原始问题一起发送给LLM，生成基于知识的回答</text>
+    
+    <!-- Connecting Lines -->
+    <line x1="230" y1="200" x2="270" y2="200" class="arrow" />
+    <text x="250" y="190" class="component-desc">文本</text>
+    
+    <line x1="420" y1="200" x2="460" y2="200" class="arrow" />
+    <text x="440" y="190" class="component-desc">向量</text>
+    
+    <line x1="610" y1="200" x2="650" y2="200" class="arrow" />
+    <text x="630" y="190" class="component-desc">结果</text>
+    
+    <line x1="345" y1="280" x2="345" y2="380" class="arrow" />
+    <text x="355" y="330" class="component-desc">存储</text>
+    
+    <line x1="535" y1="280" x2="400" y2="380" class="arrow" />
+    <text x="450" y="330" class="component-desc">检索</text>
+    
+    <!-- Query Flow -->
+    <path d="M 400 440 L 400 470 C 400 490, 300 490, 300 510 L 300 530" class="arrow dashed" stroke="#1890ff" />
+    <text x="350" y="490" class="component-desc" fill="#1890ff">查询流</text>
+    
+    <path d="M 300 530 C 300 550, 650 550, 650 280" class="arrow dashed" stroke="#fa8c16" />
+    <text x="450" y="570" class="component-desc" fill="#fa8c16">增强生成</text>
+</svg> 

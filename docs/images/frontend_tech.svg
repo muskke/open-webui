@@ -1,0 +1,101 @@
+<svg width="700" height="550" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .title { font: bold 24px sans-serif; }
+            .label { font: 12px sans-serif; }
+            .box { stroke: #666; fill: #fff; stroke-width: 2; }
+            .category { fill: #e6f7ff; stroke: #1890ff; }
+            .tech { fill: #fff; stroke: #d9d9d9; }
+            .core { fill: #f6ffed; stroke: #52c41a; }
+            .ui { fill: #fff7e6; stroke: #fa8c16; }
+            .util { fill: #f9f0ff; stroke: #722ed1; }
+            .line { stroke: #ccc; stroke-width: 1; }
+            .tech-title { font: bold 14px sans-serif; }
+            .tech-desc { font: 11px sans-serif; fill: #555; }
+            .arrow { stroke: #666; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+            .category-title { font: bold 16px sans-serif; }
+        </style>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+    
+    <!-- Title -->
+    <text x="350" y="30" class="title" text-anchor="middle">Open WebUI 前端技术栈</text>
+    
+    <!-- Core Framework -->
+    <rect x="50" y="60" width="600" height="120" rx="10" class="box core" />
+    <text x="350" y="85" class="category-title" text-anchor="middle">核心框架</text>
+    
+    <rect x="80" y="100" width="160" height="60" rx="5" class="box tech" />
+    <text x="160" y="125" class="tech-title" text-anchor="middle">SvelteKit</text>
+    <text x="160" y="145" class="tech-desc" text-anchor="middle">现代化的前端框架</text>
+    
+    <rect x="270" y="100" width="160" height="60" rx="5" class="box tech" />
+    <text x="350" y="125" class="tech-title" text-anchor="middle">TailwindCSS</text>
+    <text x="350" y="145" class="tech-desc" text-anchor="middle">实用优先的CSS框架</text>
+    
+    <rect x="460" y="100" width="160" height="60" rx="5" class="box tech" />
+    <text x="540" y="125" class="tech-title" text-anchor="middle">TypeScript</text>
+    <text x="540" y="145" class="tech-desc" text-anchor="middle">类型安全的JavaScript</text>
+    
+    <!-- UI Components -->
+    <rect x="50" y="200" width="600" height="170" rx="10" class="box ui" />
+    <text x="350" y="225" class="category-title" text-anchor="middle">UI组件</text>
+    
+    <rect x="80" y="245" width="120" height="50" rx="5" class="box tech" />
+    <text x="140" y="270" class="tech-title" text-anchor="middle" font-size="13px">Chat.svelte</text>
+    <text x="140" y="285" class="tech-desc" text-anchor="middle">聊天界面</text>
+    
+    <rect x="220" y="245" width="120" height="50" rx="5" class="box tech" />
+    <text x="280" y="270" class="tech-title" text-anchor="middle" font-size="13px">ModelSelector</text>
+    <text x="280" y="285" class="tech-desc" text-anchor="middle">模型选择</text>
+    
+    <rect x="360" y="245" width="120" height="50" rx="5" class="box tech" />
+    <text x="420" y="270" class="tech-title" text-anchor="middle" font-size="13px">Messages</text>
+    <text x="420" y="285" class="tech-desc" text-anchor="middle">消息展示</text>
+    
+    <rect x="500" y="245" width="120" height="50" rx="5" class="box tech" />
+    <text x="560" y="270" class="tech-title" text-anchor="middle" font-size="13px">Settings</text>
+    <text x="560" y="285" class="tech-desc" text-anchor="middle">设置面板</text>
+    
+    <rect x="80" y="305" width="120" height="50" rx="5" class="box tech" />
+    <text x="140" y="330" class="tech-title" text-anchor="middle" font-size="13px">Workspace</text>
+    <text x="140" y="345" class="tech-desc" text-anchor="middle">工作空间</text>
+    
+    <rect x="220" y="305" width="120" height="50" rx="5" class="box tech" />
+    <text x="280" y="330" class="tech-title" text-anchor="middle" font-size="13px">Files</text>
+    <text x="280" y="345" class="tech-desc" text-anchor="middle">文件管理</text>
+    
+    <rect x="360" y="305" width="120" height="50" rx="5" class="box tech" />
+    <text x="420" y="330" class="tech-title" text-anchor="middle" font-size="13px">Modal</text>
+    <text x="420" y="345" class="tech-desc" text-anchor="middle">模态窗口</text>
+    
+    <rect x="500" y="305" width="120" height="50" rx="5" class="box tech" />
+    <text x="560" y="330" class="tech-title" text-anchor="middle" font-size="13px">Admin</text>
+    <text x="560" y="345" class="tech-desc" text-anchor="middle">管理界面</text>
+    
+    <!-- Utilities -->
+    <rect x="50" y="390" width="600" height="140" rx="10" class="box util" />
+    <text x="350" y="415" class="category-title" text-anchor="middle">实用工具库</text>
+    
+    <rect x="80" y="435" width="120" height="70" rx="5" class="box tech" />
+    <text x="140" y="460" class="tech-title" text-anchor="middle" font-size="13px">Markdown-it</text>
+    <text x="140" y="475" class="tech-desc" text-anchor="middle">Markdown渲染</text>
+    <text x="140" y="490" class="tech-desc" text-anchor="middle">代码高亮</text>
+    
+    <rect x="220" y="435" width="120" height="70" rx="5" class="box tech" />
+    <text x="280" y="460" class="tech-title" text-anchor="middle" font-size="13px">Socket.io</text>
+    <text x="280" y="475" class="tech-desc" text-anchor="middle">WebSocket通信</text>
+    <text x="280" y="490" class="tech-desc" text-anchor="middle">实时数据传输</text>
+    
+    <rect x="360" y="435" width="120" height="70" rx="5" class="box tech" />
+    <text x="420" y="460" class="tech-title" text-anchor="middle" font-size="13px">KaTeX</text>
+    <text x="420" y="475" class="tech-desc" text-anchor="middle">数学公式渲染</text>
+    <text x="420" y="490" class="tech-desc" text-anchor="middle">LaTeX支持</text>
+    
+    <rect x="500" y="435" width="120" height="70" rx="5" class="box tech" />
+    <text x="560" y="460" class="tech-title" text-anchor="middle" font-size="13px">Mermaid</text>
+    <text x="560" y="475" class="tech-desc" text-anchor="middle">图表生成</text>
+    <text x="560" y="490" class="tech-desc" text-anchor="middle">流程图渲染</text>
+</svg> 

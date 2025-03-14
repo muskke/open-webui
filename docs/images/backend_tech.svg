@@ -1,0 +1,94 @@
+<svg width="700" height="550" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .title { font: bold 24px sans-serif; }
+            .label { font: 12px sans-serif; }
+            .box { stroke: #666; fill: #fff; stroke-width: 2; }
+            .category { fill: #e6f7ff; stroke: #1890ff; }
+            .tech { fill: #fff; stroke: #d9d9d9; }
+            .web { fill: #f6ffed; stroke: #52c41a; }
+            .data { fill: #fff7e6; stroke: #fa8c16; }
+            .ai { fill: #f9f0ff; stroke: #722ed1; }
+            .sec { fill: #fff2f0; stroke: #ff4d4f; }
+            .line { stroke: #ccc; stroke-width: 1; }
+            .arrow { stroke: #666; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+            .tech-title { font: bold 14px sans-serif; }
+            .tech-desc { font: 11px sans-serif; fill: #555; }
+            .category-title { font: bold 16px sans-serif; }
+        </style>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+    
+    <!-- Title -->
+    <text x="350" y="30" class="title" text-anchor="middle">Open WebUI 后端技术栈</text>
+    
+    <!-- Web Framework -->
+    <rect x="50" y="60" width="600" height="120" rx="10" class="box web" />
+    <text x="350" y="85" class="category-title" text-anchor="middle">Web框架和服务</text>
+    
+    <rect x="80" y="100" width="160" height="60" rx="5" class="box tech" />
+    <text x="160" y="125" class="tech-title" text-anchor="middle">FastAPI</text>
+    <text x="160" y="145" class="tech-desc" text-anchor="middle">高性能异步API框架</text>
+    
+    <rect x="270" y="100" width="160" height="60" rx="5" class="box tech" />
+    <text x="350" y="125" class="tech-title" text-anchor="middle">Uvicorn</text>
+    <text x="350" y="145" class="tech-desc" text-anchor="middle">ASGI服务器</text>
+    
+    <rect x="460" y="100" width="160" height="60" rx="5" class="box tech" />
+    <text x="540" y="125" class="tech-title" text-anchor="middle">WebSocket</text>
+    <text x="540" y="145" class="tech-desc" text-anchor="middle">实时通信协议</text>
+    
+    <!-- Data Management -->
+    <rect x="50" y="200" width="600" height="120" rx="10" class="box data" />
+    <text x="350" y="225" class="category-title" text-anchor="middle">数据管理</text>
+    
+    <rect x="80" y="245" width="160" height="60" rx="5" class="box tech" />
+    <text x="160" y="270" class="tech-title" text-anchor="middle">SQLite / PostgreSQL</text>
+    <text x="160" y="290" class="tech-desc" text-anchor="middle">关系型数据库存储</text>
+    
+    <rect x="270" y="245" width="160" height="60" rx="5" class="box tech" />
+    <text x="350" y="270" class="tech-title" text-anchor="middle">SQLAlchemy</text>
+    <text x="350" y="290" class="tech-desc" text-anchor="middle">ORM和数据库工具</text>
+    
+    <rect x="460" y="245" width="160" height="60" rx="5" class="box tech" />
+    <text x="540" y="270" class="tech-title" text-anchor="middle">Alembic</text>
+    <text x="540" y="290" class="tech-desc" text-anchor="middle">数据库迁移工具</text>
+    
+    <!-- AI Integration -->
+    <rect x="50" y="340" width="600" height="120" rx="10" class="box ai" />
+    <text x="350" y="365" class="category-title" text-anchor="middle">AI集成</text>
+    
+    <rect x="80" y="385" width="120" height="60" rx="5" class="box tech" />
+    <text x="140" y="410" class="tech-title" text-anchor="middle" font-size="13px">Ollama</text>
+    <text x="140" y="425" class="tech-desc" text-anchor="middle">本地模型运行</text>
+    
+    <rect x="220" y="385" width="120" height="60" rx="5" class="box tech" />
+    <text x="280" y="410" class="tech-title" text-anchor="middle" font-size="13px">OpenAI</text>
+    <text x="280" y="425" class="tech-desc" text-anchor="middle">API集成</text>
+    
+    <rect x="360" y="385" width="120" height="60" rx="5" class="box tech" />
+    <text x="420" y="410" class="tech-title" text-anchor="middle" font-size="13px">Anthropic</text>
+    <text x="420" y="425" class="tech-desc" text-anchor="middle">Claude模型</text>
+    
+    <rect x="500" y="385" width="120" height="60" rx="5" class="box tech" />
+    <text x="560" y="410" class="tech-title" text-anchor="middle" font-size="13px">LangChain</text>
+    <text x="560" y="425" class="tech-desc" text-anchor="middle">LLM应用构建</text>
+    
+    <!-- Security -->
+    <rect x="50" y="480" width="600" height="50" rx="10" class="box sec" />
+    <text x="350" y="505" class="category-title" text-anchor="middle">安全与认证</text>
+    
+    <rect x="80" y="520" width="120" height="0" rx="5" class="box tech" opacity="0" />
+    <text x="140" y="510" class="tech-title" text-anchor="middle" font-size="13px">JWT</text>
+    
+    <rect x="240" y="520" width="120" height="0" rx="5" class="box tech" opacity="0" />
+    <text x="280" y="510" class="tech-title" text-anchor="middle" font-size="13px">OAuth</text>
+    
+    <rect x="400" y="520" width="120" height="0" rx="5" class="box tech" opacity="0" />
+    <text x="420" y="510" class="tech-title" text-anchor="middle" font-size="13px">HTTPS</text>
+    
+    <rect x="560" y="520" width="120" height="0" rx="5" class="box tech" opacity="0" />
+    <text x="560" y="510" class="tech-title" text-anchor="middle" font-size="13px">角色权限</text>
+</svg> 

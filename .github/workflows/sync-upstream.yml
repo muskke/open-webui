@@ -1,0 +1,73 @@
+name: 同步上游仓库
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # 每周日凌晨运行
+  workflow_dispatch:     # 允许手动触发
+
+jobs:
+  sync:
+    name: 同步上游代码
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: 设置Git配置
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+      
+      - name: 添加上游仓库
+        run: |
+          git remote add upstream https://github.com/open-webui/open-webui.git
+      
+      - name: 获取所有分支和标签
+        run: |
+          git fetch --all
+          git fetch upstream --tags
+      
+      - name: 同步main分支
+        run: |
+          echo "同步main分支..."
+          git checkout main
+          git fetch upstream
+          git reset --hard upstream/main
+          git push origin main --force
+      
+      - name: 同步develop分支
+        run: |
+          echo "同步develop分支..."
+          if ! git show-ref --verify --quiet refs/heads/develop; then
+            echo "创建develop分支..."
+            git checkout -b develop
+            git push --set-upstream origin develop
+          else
+            git checkout develop
+          fi
+          
+          echo "尝试合并main分支..."
+          if git merge main --no-edit; then
+            echo "合并成功，推送更新..."
+            git push origin develop
+          else
+            echo "合并冲突，需要手动处理"
+            git merge --abort
+            exit 1
+          fi
+      
+      - name: 发送通知
+        if: ${{ failure() }}
+        # 这里可以添加通知步骤，例如发送邮件或创建Issue
+        run: |
+          echo "同步过程中出现错误，请手动检查"
+      
+      - name: 同步结果
+        run: |
+          echo "同步完成!"
+          echo "main分支已与upstream/main同步"
+          echo "develop分支已尝试合并main分支更新" 

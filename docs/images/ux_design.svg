@@ -1,0 +1,119 @@
+<svg width="850" height="600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .title { font: bold 24px sans-serif; }
+            .subtitle { font: bold 18px sans-serif; }
+            .box { stroke: #666; fill: #fff; stroke-width: 2; }
+            .component { fill: #f0f5ff; stroke: #1890ff; }
+            .component-header { fill: #e6f7ff; }
+            .flow { fill: #f6ffed; stroke: #52c41a; }
+            .interaction { fill: #fff7e6; stroke: #fa8c16; }
+            .persona { fill: #f9f0ff; stroke: #722ed1; }
+            .arrow { stroke: #666; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+            .dashed { stroke-dasharray: 5,5; }
+            .label { font: 12px sans-serif; }
+            .component-title { font: bold 14px sans-serif; }
+            .description { font: 11px sans-serif; fill: #555; }
+            .numbered-circle { fill: #1890ff; }
+            .numbered-text { fill: white; font: bold 12px sans-serif; }
+        </style>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+    
+    <!-- Title -->
+    <text x="425" y="30" class="title" text-anchor="middle">Open WebUI 用户体验设计</text>
+    
+    <!-- User Personas -->
+    <rect x="50" y="60" width="750" height="100" rx="10" class="persona" />
+    <text x="425" y="85" class="subtitle" text-anchor="middle">用户角色</text>
+    
+    <!-- Persona 1 -->
+    <rect x="80" y="100" width="160" height="40" rx="5" class="box" />
+    <text x="160" y="125" class="component-title" text-anchor="middle">普通用户</text>
+    
+    <!-- Persona 2 -->
+    <rect x="260" y="100" width="160" height="40" rx="5" class="box" />
+    <text x="340" y="125" class="component-title" text-anchor="middle">开发者</text>
+    
+    <!-- Persona 3 -->
+    <rect x="440" y="100" width="160" height="40" rx="5" class="box" />
+    <text x="520" y="125" class="component-title" text-anchor="middle">AI研究员</text>
+    
+    <!-- Persona 4 -->
+    <rect x="620" y="100" width="160" height="40" rx="5" class="box" />
+    <text x="700" y="125" class="component-title" text-anchor="middle">系统管理员</text>
+    
+    <!-- User Flows -->
+    <rect x="50" y="180" width="750" height="100" rx="10" class="flow" />
+    <text x="425" y="205" class="subtitle" text-anchor="middle">用户流程</text>
+    
+    <!-- Flow 1: Chat -->
+    <rect x="80" y="220" width="160" height="40" rx="5" class="box" />
+    <text x="160" y="245" class="component-title" text-anchor="middle">对话流程</text>
+    
+    <!-- Flow 2: Model Selection -->
+    <rect x="260" y="220" width="160" height="40" rx="5" class="box" />
+    <text x="340" y="245" class="component-title" text-anchor="middle">模型选择流程</text>
+    
+    <!-- Flow 3: Document Upload -->
+    <rect x="440" y="220" width="160" height="40" rx="5" class="box" />
+    <text x="520" y="245" class="component-title" text-anchor="middle">文档上传流程</text>
+    
+    <!-- Flow 4: Settings -->
+    <rect x="620" y="220" width="160" height="40" rx="5" class="box" />
+    <text x="700" y="245" class="component-title" text-anchor="middle">设置流程</text>
+    
+    <!-- Component Design -->
+    <rect x="50" y="300" width="750" height="280" rx="10" class="component" />
+    <text x="425" y="325" class="subtitle" text-anchor="middle">组件设计</text>
+    
+    <!-- Chat Interface -->
+    <rect x="80" y="340" width="220" height="220" rx="5" class="box" />
+    <rect x="80" y="340" width="220" height="30" rx="5" class="component-header" />
+    <text x="190" y="360" class="component-title" text-anchor="middle">聊天界面</text>
+    
+    <text x="100" y="380" class="description">关键特性:</text>
+    <text x="100" y="400" class="description">• 对话历史管理</text>
+    <text x="100" y="420" class="description">• Markdown支持</text>
+    <text x="100" y="440" class="description">• 代码高亮</text>
+    <text x="100" y="460" class="description">• 响应式设计</text>
+    <text x="100" y="480" class="description">• 消息重发与编辑</text>
+    <text x="100" y="500" class="description">• 模型参数调整</text>
+    <text x="100" y="520" class="description">• 多会话管理</text>
+    <text x="100" y="540" class="description">文件: src/routes/Chat.svelte</text>
+    
+    <!-- Model Manager -->
+    <rect x="320" y="340" width="220" height="220" rx="5" class="box" />
+    <rect x="320" y="340" width="220" height="30" rx="5" class="component-header" />
+    <text x="430" y="360" class="component-title" text-anchor="middle">模型管理</text>
+    
+    <text x="340" y="380" class="description">关键特性:</text>
+    <text x="340" y="400" class="description">• 模型列表与搜索</text>
+    <text x="340" y="420" class="description">• 模型详情展示</text>
+    <text x="340" y="440" class="description">• 新模型下载</text>
+    <text x="340" y="460" class="description">• 模型参数配置</text>
+    <text x="340" y="480" class="description">• 模型状态监控</text>
+    <text x="340" y="500" class="description">• 模型分类与标签</text>
+    <text x="340" y="520" class="description">• 模型删除与更新</text>
+    <text x="340" y="540" class="description">文件: src/routes/Models.svelte</text>
+    
+    <!-- Settings Panel -->
+    <rect x="560" y="340" width="220" height="220" rx="5" class="box" />
+    <rect x="560" y="340" width="220" height="30" rx="5" class="component-header" />
+    <text x="670" y="360" class="component-title" text-anchor="middle">设置面板</text>
+    
+    <text x="580" y="380" class="description">关键特性:</text>
+    <text x="580" y="400" class="description">• 主题切换</text>
+    <text x="580" y="420" class="description">• 语言设置</text>
+    <text x="580" y="440" class="description">• 用户管理</text>
+    <text x="580" y="460" class="description">• API密钥配置</text>
+    <text x="580" y="480" class="description">• 系统参数调整</text>
+    <text x="580" y="500" class="description">• 界面布局定制</text>
+    <text x="580" y="520" class="description">• 数据导入导出</text>
+    <text x="580" y="540" class="description">文件: src/routes/Settings.svelte</text>
+    
+    <!-- Interaction Design -->
+    <rect x="50" y="600" width="750" height="0" rx="10" class="interaction" />
+</svg> 

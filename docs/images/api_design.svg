@@ -1,0 +1,174 @@
+<svg width="800" height="550" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .title { font: bold 20px sans-serif; }
+            .subtitle { font: 16px sans-serif; fill: #555; }
+            .box { stroke: #666; fill: #fff; stroke-width: 2; }
+            .api-box { stroke: #1890ff; fill: #e6f7ff; stroke-width: 2; }
+            .client-box { stroke: #52c41a; fill: #f6ffed; stroke-width: 2; }
+            .model-box { stroke: #722ed1; fill: #f9f0ff; stroke-width: 2; }
+            .auth-box { stroke: #fa8c16; fill: #fff7e6; stroke-width: 2; }
+            .data-box { stroke: #ff4d4f; fill: #fff2f0; stroke-width: 2; }
+            .api-title { font: bold 14px sans-serif; }
+            .api-method { font: bold 12px monospace; }
+            .api-path { font: 11px monospace; fill: #333; }
+            .api-desc { font: 11px sans-serif; fill: #555; }
+            .arrow { stroke: #666; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+            .section { font: bold 16px sans-serif; fill: #333; }
+        </style>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+    
+    <!-- Title -->
+    <text x="400" y="30" class="title" text-anchor="middle">Open WebUI API 接口设计</text>
+    <text x="400" y="55" class="subtitle" text-anchor="middle">RESTful API 架构</text>
+    
+    <!-- Left Column - Core APIs -->
+    <text x="200" y="90" class="section" text-anchor="middle">核心 API</text>
+    
+    <!-- Chat API -->
+    <rect x="50" y="110" width="300" height="120" rx="5" class="api-box" />
+    <text x="200" y="130" class="api-title" text-anchor="middle">聊天 API</text>
+    
+    <text x="70" y="155" class="api-method">GET</text>
+    <text x="110" y="155" class="api-path">/api/chats</text>
+    <text x="220" y="155" class="api-desc">获取聊天列表</text>
+    
+    <text x="70" y="175" class="api-method">POST</text>
+    <text x="110" y="175" class="api-path">/api/chats</text>
+    <text x="220" y="175" class="api-desc">创建新的聊天</text>
+    
+    <text x="70" y="195" class="api-method">GET</text>
+    <text x="110" y="195" class="api-path">/api/chats/{id}</text>
+    <text x="220" y="195" class="api-desc">获取特定聊天详情</text>
+    
+    <text x="70" y="215" class="api-method">DELETE</text>
+    <text x="110" y="215" class="api-path">/api/chats/{id}</text>
+    <text x="220" y="215" class="api-desc">删除聊天</text>
+    
+    <!-- User API -->
+    <rect x="50" y="250" width="300" height="120" rx="5" class="auth-box" />
+    <text x="200" y="270" class="api-title" text-anchor="middle">用户 API</text>
+    
+    <text x="70" y="295" class="api-method">POST</text>
+    <text x="110" y="295" class="api-path">/api/auth/login</text>
+    <text x="220" y="295" class="api-desc">用户登录</text>
+    
+    <text x="70" y="315" class="api-method">POST</text>
+    <text x="110" y="315" class="api-path">/api/auth/logout</text>
+    <text x="220" y="315" class="api-desc">用户注销</text>
+    
+    <text x="70" y="335" class="api-method">GET</text>
+    <text x="110" y="335" class="api-path">/api/users</text>
+    <text x="220" y="335" class="api-desc">获取用户列表（管理员）</text>
+    
+    <text x="70" y="355" class="api-method">PUT</text>
+    <text x="110" y="355" class="api-path">/api/users/{id}</text>
+    <text x="220" y="355" class="api-desc">更新用户信息</text>
+    
+    <!-- File API -->
+    <rect x="50" y="390" width="300" height="120" rx="5" class="data-box" />
+    <text x="200" y="410" class="api-title" text-anchor="middle">文件 API</text>
+    
+    <text x="70" y="435" class="api-method">POST</text>
+    <text x="110" y="435" class="api-path">/api/files/upload</text>
+    <text x="220" y="435" class="api-desc">上传文件</text>
+    
+    <text x="70" y="455" class="api-method">GET</text>
+    <text x="110" y="455" class="api-path">/api/files</text>
+    <text x="220" y="455" class="api-desc">获取文件列表</text>
+    
+    <text x="70" y="475" class="api-method">GET</text>
+    <text x="110" y="475" class="api-path">/api/files/{id}</text>
+    <text x="220" y="475" class="api-desc">下载文件</text>
+    
+    <text x="70" y="495" class="api-method">DELETE</text>
+    <text x="110" y="495" class="api-path">/api/files/{id}</text>
+    <text x="220" y="495" class="api-desc">删除文件</text>
+    
+    <!-- Right Column - Model APIs -->
+    <text x="600" y="90" class="section" text-anchor="middle">模型和集成 API</text>
+    
+    <!-- Model API -->
+    <rect x="450" y="110" width="300" height="120" rx="5" class="model-box" />
+    <text x="600" y="130" class="api-title" text-anchor="middle">模型 API</text>
+    
+    <text x="470" y="155" class="api-method">GET</text>
+    <text x="510" y="155" class="api-path">/api/models</text>
+    <text x="620" y="155" class="api-desc">获取可用模型列表</text>
+    
+    <text x="470" y="175" class="api-method">POST</text>
+    <text x="510" y="175" class="api-path">/api/models</text>
+    <text x="620" y="175" class="api-desc">创建新模型</text>
+    
+    <text x="470" y="195" class="api-method">DELETE</text>
+    <text x="510" y="195" class="api-path">/api/models/{id}</text>
+    <text x="620" y="195" class="api-desc">删除模型</text>
+    
+    <text x="470" y="215" class="api-method">POST</text>
+    <text x="510" y="215" class="api-path">/api/models/pull</text>
+    <text x="620" y="215" class="api-desc">拉取新模型</text>
+    
+    <!-- Retrieval API -->
+    <rect x="450" y="250" width="300" height="120" rx="5" class="api-box" />
+    <text x="600" y="270" class="api-title" text-anchor="middle">检索 API</text>
+    
+    <text x="470" y="295" class="api-method">POST</text>
+    <text x="510" y="295" class="api-path">/api/retrieval/process</text>
+    <text x="620" y="295" class="api-desc">处理文档内容</text>
+    
+    <text x="470" y="315" class="api-method">POST</text>
+    <text x="510" y="315" class="api-path">/api/retrieval/query</text>
+    <text x="620" y="315" class="api-desc">查询相关内容</text>
+    
+    <text x="470" y="335" class="api-method">POST</text>
+    <text x="510" y="335" class="api-path">/api/retrieval/websearch</text>
+    <text x="620" y="335" class="api-desc">网络搜索</text>
+    
+    <text x="470" y="355" class="api-method">POST</text>
+    <text x="510" y="355" class="api-path">/api/retrieval/webprocess</text>
+    <text x="620" y="355" class="api-desc">处理网页内容</text>
+    
+    <!-- Tool API -->
+    <rect x="450" y="390" width="300" height="120" rx="5" class="client-box" />
+    <text x="600" y="410" class="api-title" text-anchor="middle">工具 API</text>
+    
+    <text x="470" y="435" class="api-method">GET</text>
+    <text x="510" y="435" class="api-path">/api/tools</text>
+    <text x="620" y="435" class="api-desc">获取可用工具列表</text>
+    
+    <text x="470" y="455" class="api-method">POST</text>
+    <text x="510" y="455" class="api-path">/api/tools</text>
+    <text x="620" y="455" class="api-desc">创建新工具</text>
+    
+    <text x="470" y="475" class="api-method">POST</text>
+    <text x="510" y="475" class="api-path">/api/tools/run</text>
+    <text x="620" y="475" class="api-desc">运行工具</text>
+    
+    <text x="470" y="495" class="api-method">DELETE</text>
+    <text x="510" y="495" class="api-path">/api/tools/{id}</text>
+    <text x="620" y="495" class="api-desc">删除工具</text>
+    
+    <!-- Connection lines -->
+    <path d="M350 170 H450" class="arrow" />
+    <path d="M350 310 H450" class="arrow" />
+    <path d="M350 450 H450" class="arrow" />
+    
+    <!-- Legend -->
+    <rect x="50" y="530" width="15" height="15" class="api-box" />
+    <text x="75" y="540" class="api-desc">核心API</text>
+    
+    <rect x="150" y="530" width="15" height="15" class="auth-box" />
+    <text x="175" y="540" class="api-desc">认证API</text>
+    
+    <rect x="250" y="530" width="15" height="15" class="data-box" />
+    <text x="275" y="540" class="api-desc">数据API</text>
+    
+    <rect x="350" y="530" width="15" height="15" class="model-box" />
+    <text x="375" y="540" class="api-desc">模型API</text>
+    
+    <rect x="450" y="530" width="15" height="15" class="client-box" />
+    <text x="475" y="540" class="api-desc">工具API</text>
+</svg> 

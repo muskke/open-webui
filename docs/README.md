@@ -1,3 +1,38 @@
-# Project workflow
+# Open WebUI 二次开发文档
 
-[![](https://mermaid.ink/img/pako:eNq1k01rAjEQhv_KkFNLFe1N9iAUevFSRVl6Cci4Gd1ANtlmsmtF_O_N7iqtHxR76ClhMu87zwyZvcicIpEIpo-KbEavGjceC2lL9EFnukQbIGXygNye5y9TY7DAZTpZLsjXXVYXg3dapRM4hh9mu5A7-3hTfSXtAtJK21Tsj8dPl3USmJZkGVbebWNKD2rNOjAYl6HJHYdkNBwNpb3U9aNZvzFNYE6h8tFiSyZzBUGJG4K1dwVwTSYQrCptlLRvLt5dA5i2la5Ruk51Ux0VKQjuxPVbAwuyiuFlNgHfzJ5DoxtgqQf1813gnZRLZ5lAYcD7WT1lpGtiQKug9C4jZrrp-Fd-1-Y1bdzo4dvnZDLz7lPHyj8sOgfg4x84E7RTuEaZt8yRZqtDfgT_rwG2u3Dv_ERPFOQL1Cqu2F5aAClCTgVJkcSrojVWJkgh7SGmYhXcYmczkQRfUU9UZfQ4baRI1miYDl_QqlPg?type=png)](https://mermaid.live/edit#pako:eNq1k01rAjEQhv_KkFNLFe1N9iAUevFSRVl6Cci4Gd1ANtlmsmtF_O_N7iqtHxR76ClhMu87zwyZvcicIpEIpo-KbEavGjceC2lL9EFnukQbIGXygNye5y9TY7DAZTpZLsjXXVYXg3dapRM4hh9mu5A7-3hTfSXtAtJK21Tsj8dPl3USmJZkGVbebWNKD2rNOjAYl6HJHYdkNBwNpb3U9aNZvzFNYE6h8tFiSyZzBUGJG4K1dwVwTSYQrCptlLRvLt5dA5i2la5Ruk51Ux0VKQjuxPVbAwuyiuFlNgHfzJ5DoxtgqQf1813gnZRLZ5lAYcD7WT1lpGtiQKug9C4jZrrp-Fd-1-Y1bdzo4dvnZDLz7lPHyj8sOgfg4x84E7RTuEaZt8yRZqtDfgT_rwG2u3Dv_ERPFOQL1Cqu2F5aAClCTgVJkcSrojVWJkgh7SGmYhXcYmczkQRfUU9UZfQ4baRI1miYDl_QqlPg)
+这个目录包含了 Open WebUI 二次开发相关的文档和资源。
+
+## 主要文档
+
+### [二次开发完整指南](FORK_DEVELOPMENT_GUIDE.md)
+
+详细介绍了如何在保留原项目功能的基础上进行二次开发，包括：
+- 分支管理策略
+- 代码组织最佳实践
+- 自动同步原项目更新
+- 冲突处理策略
+- 版本发布流程
+
+## 工具和脚本
+
+在 `scripts` 目录中提供了以下实用工具：
+
+- `sync-upstream.sh` - 自动同步上游仓库的更新脚本
+
+## 图表和可视化资源
+
+在 `images` 目录中包含以下图表：
+
+- `fork_workflow.svg` - Fork开发工作流示意图
+- 其他项目相关图表...
+
+## 使用方法
+
+1. 阅读 [二次开发完整指南](FORK_DEVELOPMENT_GUIDE.md) 了解整体策略
+2. 按照指南中的步骤设置你的开发环境
+3. 使用提供的脚本和工具辅助开发
+4. 遵循代码组织最佳实践进行功能开发
+
+## 贡献
+
+我们欢迎对这些文档的改进和补充。如果你有好的建议，请提交 Pull Request。

@@ -1,0 +1,124 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .title { font: bold 24px sans-serif; }
+            .subtitle { font: italic 14px sans-serif; fill: #666; }
+            .box { stroke: #666; fill: #fff; stroke-width: 2; }
+            .user { fill: #e6f7ff; stroke: #1890ff; }
+            .frontend { fill: #fff7e6; stroke: #fa8c16; }
+            .backend { fill: #f9f0ff; stroke: #722ed1; }
+            .jwt { fill: #f6ffed; stroke: #52c41a; }
+            .db { fill: #fff1f0; stroke: #ff4d4f; }
+            .process { fill: #fff; stroke: #d9d9d9; }
+            .arrow { stroke: #666; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+            .dashed { stroke-dasharray: 5,5; }
+            .component-title { font: bold 14px sans-serif; }
+            .component-desc { font: 12px sans-serif; fill: #555; }
+            .step-num { font: bold 14px sans-serif; fill: #fff; }
+            .step-circle { fill: #1890ff; }
+            .flow-desc { font: 12px sans-serif; fill: #666; }
+        </style>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+    
+    <!-- Title -->
+    <text x="400" y="30" class="title" text-anchor="middle">Open WebUI 认证系统架构</text>
+    <text x="400" y="55" class="subtitle" text-anchor="middle">用户验证和授权流程</text>
+    
+    <!-- Components -->
+    <rect x="50" y="90" width="700" height="240" rx="10" class="box" fill="#f9f9f9" />
+    <text x="400" y="115" class="component-title" text-anchor="middle">认证组件架构</text>
+    
+    <!-- User Section -->
+    <rect x="80" y="135" width="120" height="60" rx="10" class="box user" />
+    <text x="140" y="170" class="component-title" text-anchor="middle">用户客户端</text>
+    
+    <!-- Frontend -->
+    <rect x="260" y="135" width="140" height="170" rx="10" class="box frontend" />
+    <text x="330" y="155" class="component-title" text-anchor="middle">前端认证</text>
+    
+    <rect x="275" y="170" width="110" height="35" rx="5" class="box process" />
+    <text x="330" y="192" class="component-desc" text-anchor="middle">登录组件</text>
+    
+    <rect x="275" y="215" width="110" height="35" rx="5" class="box process" />
+    <text x="330" y="237" class="component-desc" text-anchor="middle">JWT存储</text>
+    
+    <rect x="275" y="260" width="110" height="35" rx="5" class="box process" />
+    <text x="330" y="282" class="component-desc" text-anchor="middle">路由守卫</text>
+    
+    <!-- Backend -->
+    <rect x="460" y="135" width="140" height="170" rx="10" class="box backend" />
+    <text x="530" y="155" class="component-title" text-anchor="middle">后端认证</text>
+    
+    <rect x="475" y="170" width="110" height="35" rx="5" class="box process" />
+    <text x="530" y="192" class="component-desc" text-anchor="middle">认证API</text>
+    
+    <rect x="475" y="215" width="110" height="35" rx="5" class="box process" />
+    <text x="530" y="237" class="component-desc" text-anchor="middle">JWT处理</text>
+    
+    <rect x="475" y="260" width="110" height="35" rx="5" class="box process" />
+    <text x="530" y="282" class="component-desc" text-anchor="middle">权限检查</text>
+    
+    <!-- Database -->
+    <rect x="650" y="190" width="80" height="60" rx="10" class="box db" />
+    <text x="690" y="220" class="component-title" text-anchor="middle">用户数据库</text>
+    
+    <!-- Authentication Flow Diagram -->
+    <rect x="50" y="350" width="700" height="230" rx="10" class="box" fill="#f9f9f9" />
+    <text x="400" y="375" class="component-title" text-anchor="middle">认证流程</text>
+    
+    <!-- Steps -->
+    <circle cx="85" cy="405" r="12" class="step-circle" />
+    <text x="85" y="409" class="step-num" text-anchor="middle">1</text>
+    <text x="410" y="405" class="flow-desc" text-anchor="middle">用户提交用户名和密码</text>
+    
+    <circle cx="85" cy="435" r="12" class="step-circle" />
+    <text x="85" y="439" class="step-num" text-anchor="middle">2</text>
+    <text x="410" y="435" class="flow-desc" text-anchor="middle">后端验证用户凭据并与数据库中的哈希值比对</text>
+    
+    <circle cx="85" cy="465" r="12" class="step-circle" />
+    <text x="85" y="469" class="step-num" text-anchor="middle">3</text>
+    <text x="410" y="465" class="flow-desc" text-anchor="middle">验证成功后生成JWT令牌，包含用户ID和权限信息</text>
+    
+    <circle cx="85" cy="495" r="12" class="step-circle" />
+    <text x="85" y="499" class="step-num" text-anchor="middle">4</text>
+    <text x="410" y="495" class="flow-desc" text-anchor="middle">客户端存储JWT令牌（LocalStorage或Cookie）</text>
+    
+    <circle cx="85" cy="525" r="12" class="step-circle" />
+    <text x="85" y="529" class="step-num" text-anchor="middle">5</text>
+    <text x="410" y="525" class="flow-desc" text-anchor="middle">后续请求在Authorization头部附加JWT令牌</text>
+    
+    <circle cx="85" cy="555" r="12" class="step-circle" />
+    <text x="85" y="559" class="step-num" text-anchor="middle">6</text>
+    <text x="410" y="555" class="flow-desc" text-anchor="middle">后端验证令牌有效性并检查用户权限</text>
+    
+    <!-- Connecting Lines -->
+    <line x1="200" y1="165" x2="260" y2="165" class="arrow" />
+    <text x="230" y="155" class="component-desc">认证请求</text>
+    
+    <line x1="400" y1="165" x2="460" y2="165" class="arrow" />
+    <text x="430" y="155" class="component-desc">API调用</text>
+    
+    <line x1="460" y1="225" x2="400" y2="225" class="arrow" />
+    <text x="430" y="245" class="component-desc">返回令牌</text>
+    
+    <path d="M 260 275 L 220 275 L 220 195 L 200 195" class="arrow" />
+    <text x="220" y="290" class="component-desc">受保护资源</text>
+    
+    <path d="M 530 320 L 530 335 L 330 335 L 330 305" class="arrow dashed" />
+    <text x="430" y="350" class="component-desc">API保护</text>
+    
+    <line x1="600" y1="215" x2="650" y2="215" class="arrow" />
+    <text x="625" y="205" class="component-desc">验证</text>
+    
+    <!-- JWT Token Visual Representation -->
+    <rect x="150" y="480" width="500" height="50" rx="5" class="box jwt" />
+    <text x="250" y="510" class="component-desc" text-anchor="middle">Header</text>
+    <text x="400" y="510" class="component-desc" text-anchor="middle">Payload (用户ID, 角色)</text>
+    <text x="550" y="510" class="component-desc" text-anchor="middle">Signature</text>
+    <line x1="300" y1="485" x2="300" y2="525" class="box" stroke-width="1" />
+    <line x1="500" y1="485" x2="500" y2="525" class="box" stroke-width="1" />
+    <text x="400" y="475" class="component-desc" text-anchor="middle" font-style="italic">JWT令牌结构</text>
+</svg> 

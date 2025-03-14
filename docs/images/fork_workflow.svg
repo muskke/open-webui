@@ -1,0 +1,143 @@
+<svg width="850" height="550" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .title { font: bold 24px sans-serif; }
+            .subtitle { font: bold 16px sans-serif; }
+            .box { stroke: #666; fill: #fff; stroke-width: 2; }
+            .original { fill: #e6f7ff; stroke: #1890ff; }
+            .fork { fill: #f6ffed; stroke: #52c41a; }
+            .feature { fill: #fff7e6; stroke: #fa8c16; }
+            .release { fill: #f9f0ff; stroke: #722ed1; }
+            .arrow { stroke: #666; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+            .dashed { stroke-dasharray: 5,5; }
+            .label { font: 12px sans-serif; }
+            .branch-line { stroke: #666; stroke-width: 2; }
+            .commit-circle { fill: #fff; stroke: #666; stroke-width: 2; }
+            .commit-text { font: 11px sans-serif; }
+            .operations { font: 12px sans-serif; fill: #333; }
+            .step-circle { fill: #1890ff; stroke: white; }
+            .step-text { fill: white; font: bold 12px sans-serif; }
+        </style>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+    
+    <!-- Title -->
+    <text x="425" y="30" class="title" text-anchor="middle">Open WebUI Fork 开发工作流</text>
+    
+    <!-- Original Repository -->
+    <rect x="50" y="70" width="750" height="90" rx="10" class="original" />
+    <text x="150" y="100" class="subtitle" text-anchor="middle">原始仓库</text>
+    
+    <!-- Original Main Branch -->
+    <line x1="150" y1="120" x2="750" y2="120" class="branch-line" />
+    <text x="750" y="115" class="label" text-anchor="end">upstream/main</text>
+    
+    <!-- Original Commits -->
+    <circle cx="200" cy="120" r="8" class="commit-circle" />
+    <circle cx="300" cy="120" r="8" class="commit-circle" />
+    <circle cx="400" cy="120" r="8" class="commit-circle" />
+    <circle cx="500" cy="120" r="8" class="commit-circle" />
+    <circle cx="600" cy="120" r="8" class="commit-circle" />
+    <circle cx="700" cy="120" r="8" class="commit-circle" />
+    
+    <!-- Forked Repository -->
+    <rect x="50" y="200" width="750" height="330" rx="10" class="fork" />
+    <text x="150" y="230" class="subtitle" text-anchor="middle">你的 Fork 仓库</text>
+    
+    <!-- Main Branch in Fork -->
+    <line x1="150" y1="250" x2="750" y2="250" class="branch-line" />
+    <text x="750" y="245" class="label" text-anchor="end">origin/main</text>
+    
+    <!-- Develop Branch in Fork -->
+    <line x1="150" y1="320" x2="750" y2="320" class="branch-line" />
+    <text x="750" y="315" class="label" text-anchor="end">origin/develop</text>
+    
+    <!-- Feature Branch in Fork -->
+    <line x1="230" y1="390" x2="520" y2="390" class="branch-line" />
+    <text x="520" y="385" class="label" text-anchor="end">origin/feature/xxx</text>
+    
+    <!-- Release Branch in Fork -->
+    <line x1="540" y1="460" x2="750" y2="460" class="branch-line" />
+    <text x="750" y="455" class="label" text-anchor="end">origin/release/vX.Y.Z</text>
+    
+    <!-- Commits on Main in Fork -->
+    <circle cx="200" cy="250" r="8" class="commit-circle" />
+    <circle cx="300" cy="250" r="8" class="commit-circle" />
+    <circle cx="400" cy="250" r="8" class="commit-circle" />
+    <circle cx="500" cy="250" r="8" class="commit-circle" />
+    <circle cx="600" cy="250" r="8" class="commit-circle" />
+    <circle cx="700" cy="250" r="8" class="commit-circle" />
+    
+    <!-- Commits on Develop Branch -->
+    <circle cx="200" cy="320" r="8" class="commit-circle" />
+    <circle cx="280" cy="320" r="8" class="commit-circle" />
+    <circle cx="350" cy="320" r="8" class="commit-circle" />
+    <circle cx="430" cy="320" r="8" class="commit-circle" />
+    <circle cx="520" cy="320" r="8" class="commit-circle" />
+    <circle cx="610" cy="320" r="8" class="commit-circle" />
+    <circle cx="700" cy="320" r="8" class="commit-circle" />
+    
+    <!-- Commits on Feature Branch -->
+    <circle cx="280" cy="390" r="8" class="commit-circle" />
+    <circle cx="350" cy="390" r="8" class="commit-circle" />
+    <circle cx="430" cy="390" r="8" class="commit-circle" />
+    <circle cx="490" cy="390" r="8" class="commit-circle" />
+    
+    <!-- Commits on Release Branch -->
+    <circle cx="610" cy="460" r="8" class="commit-circle" />
+    <circle cx="680" cy="460" r="8" class="commit-circle" />
+    <circle cx="720" cy="460" r="8" class="commit-circle" />
+    
+    <!-- Connections -->
+    <!-- Original to Fork Main -->
+    <path d="M200 120 L200 250" class="arrow" />
+    <path d="M300 120 L300 250" class="arrow" />
+    <path d="M400 120 L400 250" class="arrow" />
+    <path d="M500 120 L500 250" class="arrow" />
+    <path d="M600 120 L600 250" class="arrow" />
+    <path d="M700 120 L700 250" class="arrow" />
+    
+    <!-- Main to Develop -->
+    <path d="M200 250 L200 320" class="arrow" />
+    <path d="M400 250 L430 320" class="arrow dashed" />
+    <path d="M600 250 L610 320" class="arrow dashed" />
+    
+    <!-- Develop to Feature Branch -->
+    <path d="M280 320 L280 390" class="arrow" />
+    
+    <!-- Feature to Develop -->
+    <path d="M490 390 C505 390, 510 355, 520 320" class="arrow" />
+    
+    <!-- Develop to Release -->
+    <path d="M610 320 L610 460" class="arrow" />
+    
+    <!-- Release to Main -->
+    <path d="M720 460 C735 460, 740 370, 740 250" class="arrow dashed" />
+    
+    <!-- Workflow Steps -->
+    <circle cx="180" cy="185" r="12" class="step-circle" />
+    <text x="180" y="189" class="step-text" text-anchor="middle">1</text>
+    <text x="200" y="185" class="operations" text-anchor="start">添加 upstream 远程仓库</text>
+    
+    <circle cx="180" cy="280" r="12" class="step-circle" />
+    <text x="180" y="284" class="step-text" text-anchor="middle">2</text>
+    <text x="200" y="280" class="operations" text-anchor="start">从 upstream/main 同步到 origin/main</text>
+    
+    <circle cx="180" cy="350" r="12" class="step-circle" />
+    <text x="180" y="354" class="step-text" text-anchor="middle">3</text>
+    <text x="200" y="350" class="operations" text-anchor="start">将 main 更新合并到 develop 分支</text>
+    
+    <circle cx="180" cy="420" r="12" class="step-circle" />
+    <text x="180" y="424" class="step-text" text-anchor="middle">4</text>
+    <text x="200" y="420" class="operations" text-anchor="start">在功能分支上开发新功能</text>
+    
+    <circle cx="180" cy="490" r="12" class="step-circle" />
+    <text x="180" y="494" class="step-text" text-anchor="middle">5</text>
+    <text x="200" y="490" class="operations" text-anchor="start">完成开发后合并回 develop 分支</text>
+    
+    <circle cx="550" cy="490" r="12" class="step-circle" />
+    <text x="550" y="494" class="step-text" text-anchor="middle">6</text>
+    <text x="570" y="490" class="operations" text-anchor="start">准备发布时创建 release 分支</text>
+</svg> 

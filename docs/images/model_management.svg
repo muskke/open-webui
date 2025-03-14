@@ -1,0 +1,134 @@
+<svg width="750" height="500" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .title { font: bold 20px sans-serif; }
+            .box { stroke: #666; fill: #fff; stroke-width: 2; }
+            .component { fill: #e6f7ff; stroke: #1890ff; }
+            .frontend { fill: #f6ffed; stroke: #52c41a; }
+            .backend { fill: #fff7e6; stroke: #fa8c16; }
+            .model { fill: #f9f0ff; stroke: #722ed1; }
+            .arrow { stroke: #666; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+            .dashed { stroke-dasharray: 5,5; }
+            .label { font: 12px sans-serif; }
+            .component-title { font: bold 14px sans-serif; }
+            .description { font: 11px sans-serif; fill: #555; }
+            .flow-step { font: bold 14px sans-serif; }
+            .step-circle { fill: #1890ff; }
+            .step-text { fill: white; }
+        </style>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+    
+    <!-- Title -->
+    <text x="375" y="30" class="title" text-anchor="middle">模型管理系统</text>
+    
+    <!-- Frontend Components -->
+    <rect x="50" y="60" width="200" height="380" rx="10" class="frontend" />
+    <text x="150" y="80" class="component-title" text-anchor="middle">前端组件</text>
+    
+    <!-- Model Selector -->
+    <rect x="70" y="100" width="160" height="80" rx="5" class="box component" />
+    <text x="150" y="120" class="component-title" text-anchor="middle">模型选择器</text>
+    <text x="150" y="140" class="description" text-anchor="middle">选择和切换模型</text>
+    <text x="150" y="160" class="description" text-anchor="middle">src/components/chat/ModelSelector.svelte</text>
+    
+    <!-- Model List -->
+    <rect x="70" y="200" width="160" height="80" rx="5" class="box component" />
+    <text x="150" y="220" class="component-title" text-anchor="middle">模型列表</text>
+    <text x="150" y="240" class="description" text-anchor="middle">展示可用模型</text>
+    <text x="150" y="260" class="description" text-anchor="middle">显示模型状态与详情</text>
+    
+    <!-- Model Builder -->
+    <rect x="70" y="300" width="160" height="80" rx="5" class="box component" />
+    <text x="150" y="320" class="component-title" text-anchor="middle">模型构建器</text>
+    <text x="150" y="340" class="description" text-anchor="middle">创建自定义模型</text>
+    <text x="150" y="360" class="description" text-anchor="middle">设置模型参数</text>
+    
+    <!-- Backend API -->
+    <rect x="300" y="60" width="200" height="380" rx="10" class="backend" />
+    <text x="400" y="80" class="component-title" text-anchor="middle">后端 API</text>
+    
+    <!-- Models API -->
+    <rect x="320" y="100" width="160" height="80" rx="5" class="box component" />
+    <text x="400" y="120" class="component-title" text-anchor="middle">模型管理 API</text>
+    <text x="400" y="140" class="description" text-anchor="middle">获取/创建/删除模型</text>
+    <text x="400" y="160" class="description" text-anchor="middle">routers/models.py</text>
+    
+    <!-- Ollama API -->
+    <rect x="320" y="200" width="160" height="80" rx="5" class="box component" />
+    <text x="400" y="220" class="component-title" text-anchor="middle">Ollama 集成</text>
+    <text x="400" y="240" class="description" text-anchor="middle">管理 Ollama 模型</text>
+    <text x="400" y="260" class="description" text-anchor="middle">routers/ollama.py</text>
+    
+    <!-- OpenAI API -->
+    <rect x="320" y="300" width="160" height="80" rx="5" class="box component" />
+    <text x="400" y="320" class="component-title" text-anchor="middle">OpenAI 集成</text>
+    <text x="400" y="340" class="description" text-anchor="middle">管理 OpenAI 兼容模型</text>
+    <text x="400" y="360" class="description" text-anchor="middle">routers/openai.py</text>
+    
+    <!-- External Model Services -->
+    <rect x="550" y="60" width="150" height="380" rx="10" class="model" />
+    <text x="625" y="80" class="component-title" text-anchor="middle">外部模型服务</text>
+    
+    <!-- Ollama -->
+    <rect x="570" y="100" width="110" height="80" rx="5" class="box" />
+    <text x="625" y="120" class="component-title" text-anchor="middle">Ollama</text>
+    <text x="625" y="140" class="description" text-anchor="middle">本地模型运行</text>
+    <text x="625" y="160" class="description" text-anchor="middle">模型拉取与创建</text>
+    
+    <!-- OpenAI Compatible -->
+    <rect x="570" y="200" width="110" height="80" rx="5" class="box" />
+    <text x="625" y="220" class="component-title" text-anchor="middle">OpenAI 兼容</text>
+    <text x="625" y="240" class="description" text-anchor="middle">GPT模型</text>
+    <text x="625" y="260" class="description" text-anchor="middle">外部API兼容服务</text>
+    
+    <!-- Custom Models -->
+    <rect x="570" y="300" width="110" height="80" rx="5" class="box" />
+    <text x="625" y="320" class="component-title" text-anchor="middle">自定义模型</text>
+    <text x="625" y="340" class="description" text-anchor="middle">自定义模型文件</text>
+    <text x="625" y="360" class="description" text-anchor="middle">微调后模型</text>
+    
+    <!-- Flow 1: Model Selection -->
+    <path d="M230 140 H300" class="arrow" />
+    <text x="265" y="130" class="label" text-anchor="middle">获取模型列表</text>
+    <circle cx="265" cy="140" r="12" class="step-circle" />
+    <text x="265" y="144" class="step-text" text-anchor="middle">1</text>
+    
+    <path d="M480 140 H550" class="arrow" />
+    <text x="515" y="130" class="label" text-anchor="middle">查询模型</text>
+    <circle cx="515" cy="140" r="12" class="step-circle" />
+    <text x="515" y="144" class="step-text" text-anchor="middle">2</text>
+    
+    <path d="M550 160 H480" class="arrow" />
+    <text x="515" y="180" class="label" text-anchor="middle">模型信息</text>
+    <circle cx="515" cy="160" r="12" class="step-circle" />
+    <text x="515" y="164" class="step-text" text-anchor="middle">3</text>
+    
+    <path d="M300 160 H230" class="arrow" />
+    <text x="265" y="180" class="label" text-anchor="middle">模型列表</text>
+    <circle cx="265" cy="160" r="12" class="step-circle" />
+    <text x="265" y="164" class="step-text" text-anchor="middle">4</text>
+    
+    <!-- Flow 2: Model Creation -->
+    <path d="M230 340 H300" class="arrow" />
+    <text x="265" y="330" class="label" text-anchor="middle">创建模型请求</text>
+    <circle cx="265" cy="340" r="12" class="step-circle" />
+    <text x="265" y="344" class="step-text" text-anchor="middle">5</text>
+    
+    <path d="M480 340 H550" class="arrow" />
+    <text x="515" y="330" class="label" text-anchor="middle">构建模型</text>
+    <circle cx="515" cy="340" r="12" class="step-circle" />
+    <text x="515" y="344" class="step-text" text-anchor="middle">6</text>
+    
+    <!-- Connection between backend components -->
+    <path d="M400 180 L400 200" class="arrow" />
+    <path d="M400 280 L400 300" class="arrow" />
+    
+    <!-- Database representation -->
+    <rect x="320" y="400" width="160" height="30" rx="5" class="box" fill="#f0f0f0" />
+    <text x="400" y="420" class="description" text-anchor="middle">模型信息存储 (models/models.py)</text>
+    
+    <path d="M400 380 L400 400" class="arrow" />
+</svg> 

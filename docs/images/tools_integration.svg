@@ -1,0 +1,127 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .title { font: bold 24px sans-serif; }
+            .subtitle { font: italic 14px sans-serif; fill: #666; }
+            .box { stroke: #666; fill: #fff; stroke-width: 2; }
+            .core { fill: #e6f7ff; stroke: #1890ff; }
+            .utility { fill: #fff7e6; stroke: #fa8c16; }
+            .external { fill: #f6ffed; stroke: #52c41a; }
+            .custom { fill: #f9f0ff; stroke: #722ed1; }
+            .process { fill: #fff; stroke: #d9d9d9; }
+            .arrow { stroke: #666; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+            .dashed { stroke-dasharray: 5,5; }
+            .component-title { font: bold 14px sans-serif; }
+            .component-desc { font: 12px sans-serif; fill: #555; }
+            .step-num { font: bold 14px sans-serif; fill: #fff; }
+            .step-circle { fill: #1890ff; }
+            .flow-desc { font: 12px sans-serif; fill: #666; }
+        </style>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+    
+    <!-- Title -->
+    <text x="400" y="30" class="title" text-anchor="middle">Open WebUI 工具集成系统</text>
+    <text x="400" y="55" class="subtitle" text-anchor="middle">LLM增强工具实现与调用机制</text>
+    
+    <!-- Core Tool System -->
+    <rect x="50" y="80" width="700" height="140" rx="10" class="box core" />
+    <text x="400" y="105" class="component-title" text-anchor="middle">核心工具系统</text>
+    
+    <rect x="80" y="125" width="140" height="70" rx="5" class="box process" />
+    <text x="150" y="150" class="component-title" text-anchor="middle">工具注册</text>
+    <text x="150" y="170" class="component-desc" text-anchor="middle">tools.py</text>
+    
+    <rect x="250" y="125" width="140" height="70" rx="5" class="box process" />
+    <text x="320" y="150" class="component-title" text-anchor="middle">工具定义</text>
+    <text x="320" y="170" class="component-desc" text-anchor="middle">tool_schema.py</text>
+    
+    <rect x="420" y="125" width="140" height="70" rx="5" class="box process" />
+    <text x="490" y="150" class="component-title" text-anchor="middle">工具执行器</text>
+    <text x="490" y="170" class="component-desc" text-anchor="middle">tool_executor.py</text>
+    
+    <rect x="590" y="125" width="140" height="70" rx="5" class="box process" />
+    <text x="660" y="150" class="component-title" text-anchor="middle">工具API</text>
+    <text x="660" y="170" class="component-desc" text-anchor="middle">routers/tools.py</text>
+    
+    <!-- Built-in Tools -->
+    <rect x="50" y="240" width="320" height="160" rx="10" class="box utility" />
+    <text x="210" y="265" class="component-title" text-anchor="middle">内置工具</text>
+    
+    <rect x="70" y="285" width="130" height="40" rx="5" class="box process" />
+    <text x="135" y="310" class="component-desc" text-anchor="middle">网络搜索</text>
+    
+    <rect x="220" y="285" width="130" height="40" rx="5" class="box process" />
+    <text x="285" y="310" class="component-desc" text-anchor="middle">文件操作</text>
+    
+    <rect x="70" y="340" width="130" height="40" rx="5" class="box process" />
+    <text x="135" y="365" class="component-desc" text-anchor="middle">计算器</text>
+    
+    <rect x="220" y="340" width="130" height="40" rx="5" class="box process" />
+    <text x="285" y="365" class="component-desc" text-anchor="middle">数据可视化</text>
+    
+    <!-- External Integrations -->
+    <rect x="390" y="240" width="360" height="160" rx="10" class="box external" />
+    <text x="570" y="265" class="component-title" text-anchor="middle">外部集成</text>
+    
+    <rect x="410" y="285" width="150" height="40" rx="5" class="box process" />
+    <text x="485" y="310" class="component-desc" text-anchor="middle">Python解释器 (Pyodide)</text>
+    
+    <rect x="580" y="285" width="150" height="40" rx="5" class="box process" />
+    <text x="655" y="310" class="component-desc" text-anchor="middle">API调用</text>
+    
+    <rect x="410" y="340" width="150" height="40" rx="5" class="box process" />
+    <text x="485" y="365" class="component-desc" text-anchor="middle">GitHub集成</text>
+    
+    <rect x="580" y="340" width="150" height="40" rx="5" class="box process" />
+    <text x="655" y="365" class="component-desc" text-anchor="middle">数据库连接</text>
+    
+    <!-- Custom Tool Development -->
+    <rect x="50" y="420" width="700" height="90" rx="10" class="box custom" />
+    <text x="400" y="445" class="component-title" text-anchor="middle">自定义工具开发</text>
+    
+    <rect x="70" y="460" width="140" height="30" rx="5" class="box process" />
+    <text x="140" y="480" class="component-desc" text-anchor="middle">工具描述定义</text>
+    
+    <rect x="230" y="460" width="140" height="30" rx="5" class="box process" />
+    <text x="300" y="480" class="component-desc" text-anchor="middle">函数实现</text>
+    
+    <rect x="390" y="460" width="140" height="30" rx="5" class="box process" />
+    <text x="460" y="480" class="component-desc" text-anchor="middle">注册到系统</text>
+    
+    <rect x="550" y="460" width="140" height="30" rx="5" class="box process" />
+    <text x="620" y="480" class="component-desc" text-anchor="middle">权限配置</text>
+    
+    <!-- Tool Execution Flow -->
+    <rect x="50" y="530" width="700" height="50" rx="10" class="box" fill="#f8f8f8" />
+    <text x="400" y="555" class="component-title" text-anchor="middle">工具调用流程</text>
+    
+    <path d="M 100 580 L 140 580" class="arrow" />
+    <text x="120" y="595" class="component-desc" text-anchor="middle">LLM请求</text>
+    
+    <path d="M 140 580 L 260 580" class="arrow" />
+    <text x="200" y="595" class="component-desc" text-anchor="middle">识别工具名</text>
+    
+    <path d="M 260 580 L 380 580" class="arrow" />
+    <text x="320" y="595" class="component-desc" text-anchor="middle">参数解析</text>
+    
+    <path d="M 380 580 L 500 580" class="arrow" />
+    <text x="440" y="595" class="component-desc" text-anchor="middle">执行工具</text>
+    
+    <path d="M 500 580 L 620 580" class="arrow" />
+    <text x="560" y="595" class="component-desc" text-anchor="middle">返回结果</text>
+    
+    <path d="M 620 580 L 700 580" class="arrow" />
+    <text x="660" y="595" class="component-desc" text-anchor="middle">回传LLM</text>
+    
+    <!-- Connection Lines -->
+    <path d="M 150 195 L 150 240" class="arrow" />
+    <path d="M 490 195 L 490 240" class="arrow" />
+    
+    <path d="M 210 400 L 210 420" class="arrow" />
+    <path d="M 570 400 L 570 420" class="arrow" />
+    
+    <path d="M 400 510 L 400 530" class="arrow" />
+</svg> 

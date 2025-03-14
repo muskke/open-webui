@@ -1,0 +1,86 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .title { font: bold 24px sans-serif; }
+            .subtitle { font: italic 14px sans-serif; fill: #666; }
+            .box { stroke: #666; fill: #fff; stroke-width: 2; }
+            .authentication { fill: #e6f7ff; stroke: #1890ff; }
+            .authorization { fill: #fff7e6; stroke: #fa8c16; }
+            .data { fill: #f6ffed; stroke: #52c41a; }
+            .network { fill: #f9f0ff; stroke: #722ed1; }
+            .config { fill: #fff1f0; stroke: #ff4d4f; }
+            .process { fill: #fff; stroke: #d9d9d9; }
+            .arrow { stroke: #666; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+            .layer-label { font: bold 16px sans-serif; }
+            .component-title { font: bold 14px sans-serif; }
+            .component-desc { font: 12px sans-serif; fill: #555; }
+            .practice { font: 13px sans-serif; fill: #333; }
+        </style>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+    
+    <!-- Title -->
+    <text x="400" y="30" class="title" text-anchor="middle">Open WebUI 安全架构</text>
+    <text x="400" y="55" class="subtitle" text-anchor="middle">多层次防御与安全保障体系</text>
+    
+    <!-- Security Layers -->
+    <rect x="50" y="80" width="700" height="360" rx="10" class="box" fill="#f9f9f9" />
+    
+    <!-- Authentication Layer -->
+    <rect x="100" y="100" width="600" height="60" rx="8" class="box authentication" />
+    <text x="400" y="130" class="layer-label" text-anchor="middle">认证层</text>
+    <text x="220" y="140" class="component-desc">用户登录 · 多因素认证 · JWT令牌 · OAuth集成</text>
+    <text x="580" y="140" class="component-desc">会话管理 · 令牌刷新 · 登录限制</text>
+    
+    <!-- Authorization Layer -->
+    <rect x="100" y="180" width="600" height="60" rx="8" class="box authorization" />
+    <text x="400" y="210" class="layer-label" text-anchor="middle">授权层</text>
+    <text x="220" y="220" class="component-desc">基于角色的访问控制 · 权限系统 · API访问限制</text>
+    <text x="580" y="220" class="component-desc">资源隔离 · 功能分级 · 访问审计</text>
+    
+    <!-- Data Security Layer -->
+    <rect x="100" y="260" width="600" height="60" rx="8" class="box data" />
+    <text x="400" y="290" class="layer-label" text-anchor="middle">数据安全层</text>
+    <text x="220" y="300" class="component-desc">数据加密 · 敏感信息保护 · 数据备份</text>
+    <text x="580" y="300" class="component-desc">输入验证 · SQL注入防护 · 文件安全</text>
+    
+    <!-- Network Security Layer -->
+    <rect x="100" y="340" width="600" height="60" rx="8" class="box network" />
+    <text x="400" y="370" class="layer-label" text-anchor="middle">网络安全层</text>
+    <text x="220" y="380" class="component-desc">HTTPS/TLS · WebSocket安全 · 跨域保护</text>
+    <text x="580" y="380" class="component-desc">内容安全策略 · API限速 · 防火墙</text>
+    
+    <!-- Configuration Security -->
+    <rect x="100" y="420" width="600" height="60" rx="8" class="box config" />
+    <text x="400" y="450" class="layer-label" text-anchor="middle">配置安全层</text>
+    <text x="220" y="460" class="component-desc">安全默认配置 · 环境变量保护 · 密钥管理</text>
+    <text x="580" y="460" class="component-desc">错误处理 · 日志记录 · 安全更新</text>
+    
+    <!-- Security Best Practices -->
+    <rect x="50" y="460" width="700" height="120" rx="10" class="box" />
+    <text x="400" y="485" class="layer-label" text-anchor="middle">安全最佳实践</text>
+    
+    <rect x="75" y="505" width="150" height="60" rx="5" class="box process" />
+    <text x="150" y="525" class="component-title" text-anchor="middle">防御性编程</text>
+    <text x="150" y="545" class="component-desc" text-anchor="middle">输入验证与过滤</text>
+    
+    <rect x="245" y="505" width="150" height="60" rx="5" class="box process" />
+    <text x="320" y="525" class="component-title" text-anchor="middle">持续更新</text>
+    <text x="320" y="545" class="component-desc" text-anchor="middle">依赖监控与补丁</text>
+    
+    <rect x="415" y="505" width="150" height="60" rx="5" class="box process" />
+    <text x="490" y="525" class="component-title" text-anchor="middle">安全审计</text>
+    <text x="490" y="545" class="component-desc" text-anchor="middle">定期安全评估</text>
+    
+    <rect x="585" y="505" width="150" height="60" rx="5" class="box process" />
+    <text x="660" y="525" class="component-title" text-anchor="middle">零信任架构</text>
+    <text x="660" y="545" class="component-desc" text-anchor="middle">多层验证</text>
+    
+    <!-- Security Flow Arrows -->
+    <line x1="400" y1="160" x2="400" y2="180" class="arrow" />
+    <line x1="400" y1="240" x2="400" y2="260" class="arrow" />
+    <line x1="400" y1="320" x2="400" y2="340" class="arrow" />
+    <line x1="400" y1="400" x2="400" y2="420" class="arrow" />
+</svg> 

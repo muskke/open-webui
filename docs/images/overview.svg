@@ -1,0 +1,92 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .title { font: bold 24px sans-serif; }
+            .subtitle { font: bold 18px sans-serif; }
+            .box { stroke: #666; fill: #fff; stroke-width: 2; }
+            .blue-box { fill: #e6f7ff; stroke: #1890ff; }
+            .green-box { fill: #f6ffed; stroke: #52c41a; }
+            .orange-box { fill: #fff7e6; stroke: #fa8c16; }
+            .purple-box { fill: #f9f0ff; stroke: #722ed1; }
+            .arrow { stroke: #666; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+            .dashed { stroke-dasharray: 5,5; }
+            .label { font: 12px sans-serif; }
+            .component-title { font: bold 14px sans-serif; text-anchor: middle; }
+            .component-desc { font: 11px sans-serif; fill: #555; text-anchor: middle; }
+        </style>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+    
+    <!-- Title -->
+    <text x="400" y="30" class="title" text-anchor="middle">Open WebUI 项目概览</text>
+    
+    <!-- Main platform box -->
+    <rect x="50" y="60" width="700" height="420" rx="10" fill="#f0f2f5" stroke="#d9d9d9" stroke-width="2" />
+    
+    <!-- Frontend -->
+    <rect x="80" y="100" width="300" height="160" rx="10" class="box blue-box" />
+    <text x="230" y="125" class="component-title">前端 (Svelte)</text>
+    <text x="230" y="145" class="component-desc">现代化、响应式用户界面</text>
+    
+    <rect x="100" y="160" width="120" height="80" rx="5" class="box" />
+    <text x="160" y="190" class="component-title" font-size="12px">聊天界面</text>
+    <text x="160" y="210" class="component-desc">支持多种渲染格式</text>
+    
+    <rect x="240" y="160" width="120" height="80" rx="5" class="box" />
+    <text x="300" y="190" class="component-title" font-size="12px">工作区</text>
+    <text x="300" y="210" class="component-desc">文档和工具集成</text>
+    
+    <!-- Backend -->
+    <rect x="80" y="280" width="300" height="160" rx="10" class="box green-box" />
+    <text x="230" y="305" class="component-title">后端 (FastAPI)</text>
+    <text x="230" y="325" class="component-desc">高性能 API 服务</text>
+    
+    <rect x="100" y="340" width="120" height="80" rx="5" class="box" />
+    <text x="160" y="370" class="component-title" font-size="12px">API 路由</text>
+    <text x="160" y="390" class="component-desc">RESTful 端点</text>
+    
+    <rect x="240" y="340" width="120" height="80" rx="5" class="box" />
+    <text x="300" y="370" class="component-title" font-size="12px">数据模型</text>
+    <text x="300" y="390" class="component-desc">数据存储与管理</text>
+    
+    <!-- AI Integration -->
+    <rect x="420" y="100" width="300" height="160" rx="10" class="box purple-box" />
+    <text x="570" y="125" class="component-title">AI 模型集成</text>
+    <text x="570" y="145" class="component-desc">连接多种大型语言模型</text>
+    
+    <rect x="440" y="160" width="120" height="80" rx="5" class="box" />
+    <text x="500" y="190" class="component-title" font-size="12px">Ollama</text>
+    <text x="500" y="210" class="component-desc">本地运行的模型</text>
+    
+    <rect x="580" y="160" width="120" height="80" rx="5" class="box" />
+    <text x="640" y="190" class="component-title" font-size="12px">OpenAI API</text>
+    <text x="640" y="210" class="component-desc">兼容 OpenAI 的接口</text>
+    
+    <!-- Advanced Features -->
+    <rect x="420" y="280" width="300" height="160" rx="10" class="box orange-box" />
+    <text x="570" y="305" class="component-title">高级功能</text>
+    <text x="570" y="325" class="component-desc">增强 AI 能力的附加功能</text>
+    
+    <rect x="440" y="340" width="120" height="80" rx="5" class="box" />
+    <text x="500" y="370" class="component-title" font-size="12px">RAG 检索</text>
+    <text x="500" y="390" class="component-desc">基于文档的增强生成</text>
+    
+    <rect x="580" y="340" width="120" height="80" rx="5" class="box" />
+    <text x="640" y="370" class="component-title" font-size="12px">工具集成</text>
+    <text x="640" y="390" class="component-desc">Python 函数与外部工具</text>
+    
+    <!-- Connections -->
+    <path d="M230 260 L230 280" class="arrow" />
+    <path d="M570 260 L570 280" class="arrow" />
+    <path d="M380 180 L420 180" class="arrow" />
+    <path d="M380 360 L420 360" class="arrow" />
+    
+    <!-- Legend -->
+    <text x="100" y="465" class="label">✓ 完全离线运行</text>
+    <text x="250" y="465" class="label">✓ 多模型支持</text>
+    <text x="400" y="465" class="label">✓ 内置 RAG 引擎</text>
+    <text x="550" y="465" class="label">✓ 工具与插件接口</text>
+    <text x="700" y="465" class="label">✓ 开源可扩展</text>
+</svg> 

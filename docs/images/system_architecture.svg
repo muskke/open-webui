@@ -1,0 +1,158 @@
+<svg width="900" height="650" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .title { font: bold 24px sans-serif; }
+            .subtitle { font: bold 18px sans-serif; }
+            .box { stroke: #666; fill: #fff; stroke-width: 2; }
+            .frontend { fill: #f6ffed; stroke: #52c41a; }
+            .backend { fill: #fff7e6; stroke: #fa8c16; }
+            .database { fill: #e6fffb; stroke: #13c2c2; }
+            .external { fill: #f9f0ff; stroke: #722ed1; }
+            .component { fill: #f0f5ff; stroke: #1890ff; }
+            .arrow { stroke: #666; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+            .dashed { stroke-dasharray: 5,5; }
+            .bidirectional { marker-end: url(#arrowhead); marker-start: url(#arrowhead-start); }
+            .label { font: 12px sans-serif; }
+            .component-title { font: bold 14px sans-serif; }
+            .description { font: 11px sans-serif; fill: #555; }
+        </style>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+        <marker id="arrowhead-start" markerWidth="10" markerHeight="7" refX="1" refY="3.5" orient="auto">
+            <polygon points="10 0, 0 3.5, 10 7" fill="#666" />
+        </marker>
+    </defs>
+    
+    <!-- Title -->
+    <text x="450" y="30" class="title" text-anchor="middle">Open WebUI 系统架构</text>
+    
+    <!-- Frontend -->
+    <rect x="50" y="60" width="800" height="180" rx="10" class="frontend" />
+    <text x="450" y="80" class="subtitle" text-anchor="middle">前端 (Svelte)</text>
+    
+    <!-- Frontend Components -->
+    <rect x="80" y="100" width="150" height="120" rx="5" class="box component" />
+    <text x="155" y="120" class="component-title" text-anchor="middle">用户界面组件</text>
+    <text x="155" y="140" class="description" text-anchor="middle">Chat.svelte</text>
+    <text x="155" y="160" class="description" text-anchor="middle">ModelSelector.svelte</text>
+    <text x="155" y="180" class="description" text-anchor="middle">Files.svelte</text>
+    <text x="155" y="200" class="description" text-anchor="middle">Settings.svelte</text>
+    
+    <rect x="250" y="100" width="150" height="120" rx="5" class="box component" />
+    <text x="325" y="120" class="component-title" text-anchor="middle">状态管理</text>
+    <text x="325" y="140" class="description" text-anchor="middle">stores/</text>
+    <text x="325" y="160" class="description" text-anchor="middle">- models.ts</text>
+    <text x="325" y="180" class="description" text-anchor="middle">- chat.ts</text>
+    <text x="325" y="200" class="description" text-anchor="middle">- settings.ts</text>
+    
+    <rect x="420" y="100" width="150" height="120" rx="5" class="box component" />
+    <text x="495" y="120" class="component-title" text-anchor="middle">API 客户端</text>
+    <text x="495" y="140" class="description" text-anchor="middle">lib/api.ts</text>
+    <text x="495" y="160" class="description" text-anchor="middle">- chat 接口</text>
+    <text x="495" y="180" class="description" text-anchor="middle">- 模型接口</text>
+    <text x="495" y="200" class="description" text-anchor="middle">- 文件接口</text>
+    
+    <rect x="590" y="100" width="150" height="120" rx="5" class="box component" />
+    <text x="665" y="120" class="component-title" text-anchor="middle">工具库</text>
+    <text x="665" y="140" class="description" text-anchor="middle">lib/utils.ts</text>
+    <text x="665" y="160" class="description" text-anchor="middle">lib/markdown.ts</text>
+    <text x="665" y="180" class="description" text-anchor="middle">lib/i18n.ts</text>
+    <text x="665" y="200" class="description" text-anchor="middle">lib/theme.ts</text>
+    
+    <!-- Backend -->
+    <rect x="50" y="260" width="800" height="180" rx="10" class="backend" />
+    <text x="450" y="280" class="subtitle" text-anchor="middle">后端 (FastAPI)</text>
+    
+    <!-- Backend Components -->
+    <rect x="80" y="300" width="150" height="120" rx="5" class="box component" />
+    <text x="155" y="320" class="component-title" text-anchor="middle">API 路由</text>
+    <text x="155" y="340" class="description" text-anchor="middle">routers/</text>
+    <text x="155" y="360" class="description" text-anchor="middle">- chat.py</text>
+    <text x="155" y="380" class="description" text-anchor="middle">- models.py</text>
+    <text x="155" y="400" class="description" text-anchor="middle">- files.py</text>
+    
+    <rect x="250" y="300" width="150" height="120" rx="5" class="box component" />
+    <text x="325" y="320" class="component-title" text-anchor="middle">数据模型</text>
+    <text x="325" y="340" class="description" text-anchor="middle">models/</text>
+    <text x="325" y="360" class="description" text-anchor="middle">- chat.py</text>
+    <text x="325" y="380" class="description" text-anchor="middle">- models.py</text>
+    <text x="325" y="400" class="description" text-anchor="middle">- users.py</text>
+    
+    <rect x="420" y="300" width="150" height="120" rx="5" class="box component" />
+    <text x="495" y="320" class="component-title" text-anchor="middle">服务</text>
+    <text x="495" y="340" class="description" text-anchor="middle">services/</text>
+    <text x="495" y="360" class="description" text-anchor="middle">- llm.py</text>
+    <text x="495" y="380" class="description" text-anchor="middle">- file_processor.py</text>
+    <text x="495" y="400" class="description" text-anchor="middle">- retrieval.py</text>
+    
+    <rect x="590" y="300" width="150" height="120" rx="5" class="box component" />
+    <text x="665" y="320" class="component-title" text-anchor="middle">工具与中间件</text>
+    <text x="665" y="340" class="description" text-anchor="middle">utils/</text>
+    <text x="665" y="360" class="description" text-anchor="middle">- auth.py</text>
+    <text x="665" y="380" class="description" text-anchor="middle">- config.py</text>
+    <text x="665" y="400" class="description" text-anchor="middle">- logger.py</text>
+    
+    <!-- Data Storage -->
+    <rect x="50" y="460" width="240" height="170" rx="10" class="database" />
+    <text x="170" y="480" class="subtitle" text-anchor="middle">数据存储</text>
+    
+    <!-- Storage Components -->
+    <rect x="70" y="500" width="200" height="40" rx="5" class="box" />
+    <text x="170" y="525" class="component-title" text-anchor="middle">SQLite 数据库</text>
+    
+    <rect x="70" y="550" width="200" height="40" rx="5" class="box" />
+    <text x="170" y="575" class="component-title" text-anchor="middle">文件系统</text>
+    
+    <rect x="70" y="600" width="95" height="20" rx="3" class="box" />
+    <text x="117" y="615" class="description" text-anchor="middle">上传文件</text>
+    
+    <rect x="175" y="600" width="95" height="20" rx="3" class="box" />
+    <text x="222" y="615" class="description" text-anchor="middle">索引文件</text>
+    
+    <!-- External Services -->
+    <rect x="310" y="460" width="540" height="170" rx="10" class="external" />
+    <text x="580" y="480" class="subtitle" text-anchor="middle">外部服务</text>
+    
+    <!-- External Components -->
+    <rect x="330" y="500" width="150" height="110" rx="5" class="box" />
+    <text x="405" y="520" class="component-title" text-anchor="middle">Ollama</text>
+    <text x="405" y="540" class="description" text-anchor="middle">本地运行模型</text>
+    <text x="405" y="560" class="description" text-anchor="middle">支持各种开源模型</text>
+    <text x="405" y="580" class="description" text-anchor="middle">Llama, Mistral等</text>
+    
+    <rect x="500" y="500" width="150" height="110" rx="5" class="box" />
+    <text x="575" y="520" class="component-title" text-anchor="middle">OpenAI API</text>
+    <text x="575" y="540" class="description" text-anchor="middle">云端托管模型</text>
+    <text x="575" y="560" class="description" text-anchor="middle">GPT-3.5, GPT-4</text>
+    <text x="575" y="580" class="description" text-anchor="middle">兼容 OpenAI 的 API</text>
+    
+    <rect x="670" y="500" width="150" height="110" rx="5" class="box" />
+    <text x="745" y="520" class="component-title" text-anchor="middle">其他 LLM 服务</text>
+    <text x="745" y="540" class="description" text-anchor="middle">自定义 API 集成</text>
+    <text x="745" y="560" class="description" text-anchor="middle">本地托管模型</text>
+    <text x="745" y="580" class="description" text-anchor="middle">Embedding 模型</text>
+    
+    <!-- Connections -->
+    <!-- Frontend to Backend -->
+    <path d="M450 240 L450 260" class="arrow" />
+    <text x="460" y="250" class="label">HTTP/WebSocket</text>
+    
+    <!-- Backend to Storage -->
+    <path d="M170 440 L170 460" class="arrow" />
+    <text x="190" y="450" class="label">数据持久化</text>
+    
+    <!-- Backend to External -->
+    <path d="M580 440 L580 460" class="arrow" />
+    <text x="600" y="450" class="label">API 请求</text>
+    
+    <!-- Internal Frontend Connections -->
+    <path d="M230 160 L250 160" class="arrow" />
+    <path d="M400 160 L420 160" class="arrow" />
+    <path d="M570 160 L590 160" class="arrow" />
+    
+    <!-- Internal Backend Connections -->
+    <path d="M230 360 L250 360" class="arrow" />
+    <path d="M400 360 L420 360" class="arrow" />
+    <path d="M570 360 L590 360" class="arrow" />
+</svg> 

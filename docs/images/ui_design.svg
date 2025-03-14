@@ -1,0 +1,117 @@
+<svg width="850" height="600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .title { font: bold 24px sans-serif; }
+            .subtitle { font: italic 14px sans-serif; fill: #666; }
+            .box { stroke: #666; fill: #fff; stroke-width: 2; }
+            .chat { fill: #e6f7ff; stroke: #1890ff; }
+            .settings { fill: #fff7e6; stroke: #fa8c16; }
+            .admin { fill: #f6ffed; stroke: #52c41a; }
+            .workspace { fill: #f9f0ff; stroke: #722ed1; }
+            .principle { fill: #ffccc7; stroke: #ff4d4f; }
+            .component { fill: #fff; stroke: #d9d9d9; }
+            .arrow { stroke: #666; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+            .section-title { font: bold 16px sans-serif; }
+            .component-title { font: bold 14px sans-serif; }
+            .component-desc { font: 12px sans-serif; fill: #555; }
+        </style>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+    
+    <!-- Title -->
+    <text x="425" y="30" class="title" text-anchor="middle">Open WebUI 界面设计</text>
+    <text x="425" y="55" class="subtitle" text-anchor="middle">用户体验与交互设计原则</text>
+    
+    <!-- Main Chat Interface -->
+    <rect x="50" y="80" width="360" height="220" rx="10" class="box chat" />
+    <text x="230" y="105" class="section-title" text-anchor="middle">聊天界面</text>
+    
+    <rect x="70" y="125" width="150" height="70" rx="5" class="box component" />
+    <text x="145" y="145" class="component-title" text-anchor="middle">会话面板</text>
+    <text x="145" y="165" class="component-desc" text-anchor="middle">历史会话管理</text>
+    <text x="145" y="180" class="component-desc" text-anchor="middle">会话分组与标签</text>
+    
+    <rect x="240" y="125" width="150" height="70" rx="5" class="box component" />
+    <text x="315" y="145" class="component-title" text-anchor="middle">消息区域</text>
+    <text x="315" y="165" class="component-desc" text-anchor="middle">用户/AI交互消息</text>
+    <text x="315" y="180" class="component-desc" text-anchor="middle">Markdown支持</text>
+    
+    <rect x="70" y="210" width="150" height="70" rx="5" class="box component" />
+    <text x="145" y="230" class="component-title" text-anchor="middle">模型选择器</text>
+    <text x="145" y="250" class="component-desc" text-anchor="middle">本地/云端模型</text>
+    <text x="145" y="265" class="component-desc" text-anchor="middle">模型参数设置</text>
+    
+    <rect x="240" y="210" width="150" height="70" rx="5" class="box component" />
+    <text x="315" y="230" class="component-title" text-anchor="middle">输入区域</text>
+    <text x="315" y="250" class="component-desc" text-anchor="middle">提示输入框</text>
+    <text x="315" y="265" class="component-desc" text-anchor="middle">文件上传</text>
+    
+    <!-- Settings Interface -->
+    <rect x="430" y="80" width="370" height="130" rx="10" class="box settings" />
+    <text x="615" y="105" class="section-title" text-anchor="middle">设置界面</text>
+    
+    <rect x="450" y="125" width="100" height="70" rx="5" class="box component" />
+    <text x="500" y="150" class="component-title" text-anchor="middle">用户设置</text>
+    <text x="500" y="170" class="component-desc" text-anchor="middle">账户管理</text>
+    
+    <rect x="565" y="125" width="100" height="70" rx="5" class="box component" />
+    <text x="615" y="150" class="component-title" text-anchor="middle">UI设置</text>
+    <text x="615" y="170" class="component-desc" text-anchor="middle">外观和布局</text>
+    
+    <rect x="680" y="125" width="100" height="70" rx="5" class="box component" />
+    <text x="730" y="150" class="component-title" text-anchor="middle">模型设置</text>
+    <text x="730" y="170" class="component-desc" text-anchor="middle">API密钥管理</text>
+    
+    <!-- Admin Interface -->
+    <rect x="430" y="230" width="370" height="130" rx="10" class="box admin" />
+    <text x="615" y="255" class="section-title" text-anchor="middle">管理界面</text>
+    
+    <rect x="450" y="275" width="160" height="70" rx="5" class="box component" />
+    <text x="530" y="300" class="component-title" text-anchor="middle">用户管理</text>
+    <text x="530" y="320" class="component-desc" text-anchor="middle">权限和角色管理</text>
+    
+    <rect x="625" y="275" width="160" height="70" rx="5" class="box component" />
+    <text x="705" y="300" class="component-title" text-anchor="middle">系统设置</text>
+    <text x="705" y="320" class="component-desc" text-anchor="middle">服务配置</text>
+    
+    <!-- Workspace -->
+    <rect x="50" y="320" width="360" height="130" rx="10" class="box workspace" />
+    <text x="230" y="345" class="section-title" text-anchor="middle">工作空间</text>
+    
+    <rect x="70" y="365" width="150" height="70" rx="5" class="box component" />
+    <text x="145" y="390" class="component-title" text-anchor="middle">文档管理</text>
+    <text x="145" y="410" class="component-desc" text-anchor="middle">上传与组织文件</text>
+    
+    <rect x="240" y="365" width="150" height="70" rx="5" class="box component" />
+    <text x="315" y="390" class="component-title" text-anchor="middle">知识库</text>
+    <text x="315" y="410" class="component-desc" text-anchor="middle">检索增强功能</text>
+    
+    <!-- Design Principles -->
+    <rect x="50" y="470" width="750" height="110" rx="10" class="box principle" />
+    <text x="425" y="495" class="section-title" text-anchor="middle">设计原则</text>
+    
+    <rect x="70" y="515" width="120" height="50" rx="5" class="box component" />
+    <text x="130" y="540" class="component-title" text-anchor="middle">简洁直观</text>
+    
+    <rect x="210" y="515" width="120" height="50" rx="5" class="box component" />
+    <text x="270" y="540" class="component-title" text-anchor="middle">响应式设计</text>
+    
+    <rect x="350" y="515" width="120" height="50" rx="5" class="box component" />
+    <text x="410" y="540" class="component-title" text-anchor="middle">一致性体验</text>
+    
+    <rect x="490" y="515" width="120" height="50" rx="5" class="box component" />
+    <text x="550" y="540" class="component-title" text-anchor="middle">可访问性</text>
+    
+    <rect x="630" y="515" width="150" height="50" rx="5" class="box component" />
+    <text x="705" y="540" class="component-title" text-anchor="middle">国际化和本地化</text>
+    
+    <!-- Connecting Lines -->
+    <path d="M 230 300 L 230 320" class="arrow" />
+    <path d="M 615 360 L 350 410" class="arrow" />
+    <path d="M 615 210 L 615 230" class="arrow" />
+    
+    <path d="M 425 470 L 230 450 L 230 450" class="arrow" />
+    <path d="M 425 470 L 615 450 L 615 360" class="arrow" />
+</svg> 

@@ -1,0 +1,126 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .title { font: bold 24px sans-serif; }
+            .subtitle { font: italic 14px sans-serif; fill: #666; }
+            .box { stroke: #666; fill: #fff; stroke-width: 2; }
+            .user { fill: #e6f7ff; stroke: #1890ff; }
+            .frontend { fill: #fff7e6; stroke: #fa8c16; }
+            .backend { fill: #f9f0ff; stroke: #722ed1; }
+            .model { fill: #f6ffed; stroke: #52c41a; }
+            .storage { fill: #fff1f0; stroke: #ff4d4f; }
+            .process { fill: #fff; stroke: #d9d9d9; }
+            .arrow { stroke: #666; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+            .dashed { stroke-dasharray: 5,5; }
+            .component-title { font: bold 14px sans-serif; }
+            .component-desc { font: 12px sans-serif; fill: #555; }
+            .step-num { font: bold 14px sans-serif; fill: #fff; }
+            .step-circle { fill: #1890ff; }
+            .flow-desc { font: 12px sans-serif; fill: #666; }
+        </style>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+    
+    <!-- Title -->
+    <text x="400" y="30" class="title" text-anchor="middle">Open WebUI 聊天系统架构</text>
+    <text x="400" y="55" class="subtitle" text-anchor="middle">消息流和处理过程</text>
+    
+    <!-- User Section -->
+    <rect x="40" y="100" width="120" height="60" rx="10" class="box user" />
+    <text x="100" y="135" class="component-title" text-anchor="middle">用户</text>
+    
+    <!-- Frontend Components -->
+    <rect x="220" y="80" width="160" height="100" rx="10" class="box frontend" />
+    <text x="300" y="105" class="component-title" text-anchor="middle">前端组件</text>
+    <rect x="240" y="115" width="120" height="25" rx="5" class="box process" />
+    <text x="300" y="132" class="component-desc" text-anchor="middle">Chat.svelte</text>
+    <rect x="240" y="145" width="120" height="25" rx="5" class="box process" />
+    <text x="300" y="162" class="component-desc" text-anchor="middle">Message.svelte</text>
+    
+    <!-- Backend API -->
+    <rect x="440" y="80" width="160" height="100" rx="10" class="box backend" />
+    <text x="520" y="105" class="component-title" text-anchor="middle">后端API</text>
+    <rect x="460" y="115" width="120" height="25" rx="5" class="box process" />
+    <text x="520" y="132" class="component-desc" text-anchor="middle">chats.py</text>
+    <rect x="460" y="145" width="120" height="25" rx="5" class="box process" />
+    <text x="520" y="162" class="component-desc" text-anchor="middle">socket.py</text>
+    
+    <!-- LLM Models -->
+    <rect x="640" y="80" width="130" height="100" rx="10" class="box model" />
+    <text x="705" y="105" class="component-title" text-anchor="middle">模型服务</text>
+    <rect x="650" y="115" width="110" height="25" rx="5" class="box process" />
+    <text x="705" y="132" class="component-desc" text-anchor="middle">Ollama</text>
+    <rect x="650" y="145" width="110" height="25" rx="5" class="box process" />
+    <text x="705" y="162" class="component-desc" text-anchor="middle">OpenAI API</text>
+    
+    <!-- Storage -->
+    <rect x="440" y="250" width="160" height="70" rx="10" class="box storage" />
+    <text x="520" y="275" class="component-title" text-anchor="middle">数据存储</text>
+    <rect x="460" y="285" width="120" height="25" rx="5" class="box process" />
+    <text x="520" y="302" class="component-desc" text-anchor="middle">SQLite/PostgreSQL</text>
+    
+    <!-- Message Flow -->
+    <rect x="100" y="350" width="600" height="220" rx="10" class="box" fill="#f9f9f9" />
+    <text x="400" y="375" class="component-title" text-anchor="middle">消息处理流程</text>
+    
+    <!-- Flow Step 1 -->
+    <circle cx="130" cy="400" r="12" class="step-circle" />
+    <text x="130" y="404" class="step-num" text-anchor="middle">1</text>
+    <text x="400" y="404" class="flow-desc" text-anchor="middle">用户在聊天界面输入消息并发送</text>
+    
+    <!-- Flow Step 2 -->
+    <circle cx="130" cy="430" r="12" class="step-circle" />
+    <text x="130" y="434" class="step-num" text-anchor="middle">2</text>
+    <text x="400" y="434" class="flow-desc" text-anchor="middle">前端将消息通过API发送到后端，并在UI中显示用户消息</text>
+    
+    <!-- Flow Step 3 -->
+    <circle cx="130" cy="460" r="12" class="step-circle" />
+    <text x="130" y="464" class="step-num" text-anchor="middle">3</text>
+    <text x="400" y="464" class="flow-desc" text-anchor="middle">后端处理消息，将会话和用户信息存储到数据库</text>
+    
+    <!-- Flow Step 4 -->
+    <circle cx="130" cy="490" r="12" class="step-circle" />
+    <text x="130" y="494" class="step-num" text-anchor="middle">4</text>
+    <text x="400" y="494" class="flow-desc" text-anchor="middle">后端将消息发送到选定的AI模型服务，获取响应</text>
+    
+    <!-- Flow Step 5 -->
+    <circle cx="130" cy="520" r="12" class="step-circle" />
+    <text x="130" y="524" class="step-num" text-anchor="middle">5</text>
+    <text x="400" y="524" class="flow-desc" text-anchor="middle">响应通过WebSocket实时流式返回给前端，并在UI中显示</text>
+    
+    <!-- Flow Step 6 -->
+    <circle cx="130" cy="550" r="12" class="step-circle" />
+    <text x="130" y="554" class="step-num" text-anchor="middle">6</text>
+    <text x="400" y="554" class="flow-desc" text-anchor="middle">完整响应存储到数据库，更新会话历史</text>
+    
+    <!-- Arrows for Main Components -->
+    <line x1="160" y1="130" x2="220" y2="130" class="arrow" />
+    <text x="190" y="120" class="component-desc">输入</text>
+    
+    <line x1="380" y1="130" x2="440" y2="130" class="arrow" />
+    <text x="410" y="120" class="component-desc">API请求</text>
+    
+    <line x1="600" y1="130" x2="640" y2="130" class="arrow" />
+    <text x="620" y="120" class="component-desc">请求生成</text>
+    
+    <line x1="640" y1="150" x2="600" y2="150" class="arrow" />
+    <text x="620" y="170" class="component-desc">响应</text>
+    
+    <line x1="440" y1="150" x2="380" y2="150" class="arrow" />
+    <text x="410" y="170" class="component-desc">WebSocket</text>
+    
+    <line x1="220" y1="150" x2="160" y2="150" class="arrow" />
+    <text x="190" y="170" class="component-desc">显示</text>
+    
+    <line x1="520" y1="180" x2="520" y2="250" class="arrow" />
+    <text x="535" y="215" class="component-desc">存储消息</text>
+    
+    <line x1="520" y1="250" x2="520" y2="180" class="arrow dashed" />
+    <text x="485" y="215" class="component-desc">读取历史</text>
+    
+    <!-- WebSocket Stream Visualization -->
+    <path d="M 440 200 C 380 220, 320 190, 300 170" class="arrow dashed" stroke="#1890ff" />
+    <text x="350" y="210" class="component-desc" fill="#1890ff">流式响应</text>
+</svg> 
