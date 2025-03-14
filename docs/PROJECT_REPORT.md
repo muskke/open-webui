@@ -248,22 +248,19 @@ Open WebUI 是一个功能强大、设计精良的开源项目，为大型语言
 
 ```
 open-webui/
-├── app/                  # 后端 FastAPI 应用
+├── src/                    # 前端源代码
+│   ├── lib/               # 共享库和组件
+│   │   ├── components/    # UI 组件
+│   │   └── utils/        # 工具函数
+│   └── routes/           # 页面路由
+├── backend/               # 后端源代码
 │   ├── routers/          # API 路由
 │   ├── models/           # 数据模型
-│   ├── services/         # 业务逻辑
-│   ├── utils/            # 工具函数
-│   └── main.py           # 应用入口
-├── docs/                 # 文档
-│   └── images/           # 图表和示意图
-├── frontend/             # 前端 Svelte 应用
-│   ├── src/              # 源代码
-│   │   ├── components/   # UI 组件
-│   │   ├── routes/       # 页面路由
-│   │   ├── lib/          # 工具库
-│   │   └── app.svelte    # 主应用组件
-│   └── static/           # 静态资源
-├── tests/                # 测试
-├── docker/               # Docker 配置
-└── README.md             # 项目说明
+│   ├── internal/         # 内部模块
+│   └── utils/            # 工具函数
+├── static/               # 静态资源
+├── docs/                 # 项目文档
+├── scripts/              # 脚本文件
+├── test/                 # 测试文件
+└── kubernetes/           # Kubernetes 配置
 ``` 

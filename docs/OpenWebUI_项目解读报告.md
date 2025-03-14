@@ -101,20 +101,20 @@ Open WebUI 采用典型的前后端分离架构，具有以下主要组件：
 </div>
 
 前端模块主要包括：
-- 聊天界面 (`chat`)
-- 模型选择器 (`ModelSelector`)
-- 消息输入和显示 (`MessageInput`, `Messages`)
-- 管理界面 (`admin`)
-- 工作区 (`workspace`)
-- 各种实用工具 (`utils`)
+- 聊天界面 (`src/routes/chat`)
+- 模型选择器 (`src/lib/components/ModelSelector`)
+- 消息输入和显示 (`src/lib/components/MessageInput`, `src/lib/components/Messages`)
+- 管理界面 (`src/routes/admin`)
+- 工作区 (`src/routes/workspace`)
+- 各种实用工具 (`src/lib/utils`)
 
 后端模块主要包括：
-- API 路由器 (`routers`)
-- 数据模型 (`models`)
-- 数据库交互 (`internal/db`)
-- RAG 实现 (`retrieval`)
-- WebSocket 处理 (`socket`)
-- 用户认证 (`auths`)
+- API 路由器 (`backend/routers`)
+- 数据模型 (`backend/models`)
+- 数据库交互 (`backend/internal/db`)
+- RAG 实现 (`backend/retrieval`)
+- WebSocket 处理 (`backend/socket`)
+- 用户认证 (`backend/auths`)
 
 ## 4. 核心功能解析
 
